@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Файл src/data/PostEffects.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_post_effects_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл PostEffects.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_post_effects_8h_source.html">PostEffects.h</a>&quot;</code><br />
+</div>
+<p><a href="_post_effects_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:abaa1e851611f8fdb65a706baa006ff09" id="r_abaa1e851611f8fdb65a706baa006ff09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaa1e851611f8fdb65a706baa006ff09">shield</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;damager, int extra_damage, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:abaa1e851611f8fdb65a706baa006ff09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, соответствующая постэффекту "щит". Если сила self больше силы damager, то урона будет нанесено на 3 меньше (как максимум)  <br /></td></tr>
+<tr class="memitem:abb16722ffe0d824048158fe31cdbaadb" id="r_abb16722ffe0d824048158fe31cdbaadb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb16722ffe0d824048158fe31cdbaadb">stone_skin</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;damager, int extra_damage, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:abb16722ffe0d824048158fe31cdbaadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция, соответствующая постэффекту "каменная кожа". Получаемы урон снижается на значение выносливости self.  <br /></td></tr>
+<tr class="memitem:a57ab0f681fa6f27998caad67c73d60a2" id="r_a57ab0f681fa6f27998caad67c73d60a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57ab0f681fa6f27998caad67c73d60a2">double_damage_on_crushing</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;damager, int extra_damage, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a57ab0f681fa6f27998caad67c73d60a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-постэффект, усиливающая действие дробящего оружия: увеличивается вдвое урон  <br /></td></tr>
+<tr class="memitem:a244cd60d12f50b939202d39cbeefbaba" id="r_a244cd60d12f50b939202d39cbeefbaba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a244cd60d12f50b939202d39cbeefbaba">slimed_damage</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;damager, int extra_damage, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a244cd60d12f50b939202d39cbeefbaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-постэффект, ослабляющая рубящее оружее: убирает урон от оружия полностью, но оставляет от всего остального  <br /></td></tr>
+<tr class="memitem:a6e095db7ffa7465a574cb3f9ea5d2a78" id="r_a6e095db7ffa7465a574cb3f9ea5d2a78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e095db7ffa7465a574cb3f9ea5d2a78">no_posteffect</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int extra_damage, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a6e095db7ffa7465a574cb3f9ea5d2a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-постэффект, считающая урон без модификаций  <br /></td></tr>
+<tr class="memitem:a4d732f4650baa0766358f8ee35ec74e2" id="r_a4d732f4650baa0766358f8ee35ec74e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b">posteffect_func_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d732f4650baa0766358f8ee35ec74e2">get_posteffect</a> (<a class="el" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a> effect)</td></tr>
+<tr class="memdesc:a4d732f4650baa0766358f8ee35ec74e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразовывает тег в вызываемую функцию  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a4bfe773a5d88d321a21856ab808b2259" id="r_a4bfe773a5d88d321a21856ab808b2259"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a>, <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b">posteffect_func_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfe773a5d88d321a21856ab808b2259">posteffect_enum_func_relation</a></td></tr>
+<tr class="memdesc:a4bfe773a5d88d321a21856ab808b2259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов постэффекта с его функцией  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a57ab0f681fa6f27998caad67c73d60a2" name="a57ab0f681fa6f27998caad67c73d60a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ab0f681fa6f27998caad67c73d60a2">&#9670;&#160;</a></span>double_damage_on_crushing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int double_damage_on_crushing </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>damager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>extra_damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-постэффект, усиливающая действие дробящего оружия: увеличивается вдвое урон </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов">posteffect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int - урон, наносимый персонажу за удар с учётом постэффекта </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a4d732f4650baa0766358f8ee35ec74e2" name="a4d732f4650baa0766358f8ee35ec74e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d732f4650baa0766358f8ee35ec74e2">&#9670;&#160;</a></span>get_posteffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b">posteffect_func_type</a> get_posteffect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a></td>          <td class="paramname"><span class="paramname"><em>effect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразовывает тег в вызываемую функцию </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>тег, из которого нужно получить функцию </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов">posteffect_func_type</a> - вызываемая функция</dd></dl>
+<dl class="section user"><dt>Example</dt><dd></dd></dl>
+<div class="fragment"><div class="line">std::vector&lt;Effects&gt; effect_list {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9">STONE_SKIN</a>, <a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2">NO_POST_EFFECT</a>, SLUMED_DAMAGE};</div>
+<div class="line"><a class="code hl_function" href="#a4d732f4650baa0766358f8ee35ec74e2">get_posteffect</a>(effect_list[rand() % 3]);</div>
+<div class="ttc" id="a_post_effects_8cpp_html_a4d732f4650baa0766358f8ee35ec74e2"><div class="ttname"><a href="#a4d732f4650baa0766358f8ee35ec74e2">get_posteffect</a></div><div class="ttdeci">posteffect_func_type get_posteffect(PostEffects effect)</div><div class="ttdoc">Преобразовывает тег в вызываемую функцию</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8cpp_source.html#l00134">PostEffects.cpp:134</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9">STONE_SKIN</a></div><div class="ttdeci">@ STONE_SKIN</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2">NO_POST_EFFECT</a></div><div class="ttdeci">@ NO_POST_EFFECT</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+</div><!-- fragment --><p>Смысл создания таких сложных структур, а также этой функции хорошо отображён в <a class="el" href="_player_8cpp.html">Player.cpp</a> и <a class="el" href="_enemy_8cpp.html">Enemy.cpp</a> в функциях <a class="el" href="class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Pawn::get_extra_specifications(const Pawn&amp;, int)</a>, где ищется соответствие в константном словаре и при помощи этой функции получается функция-постэффект</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Player::get_extra_specifications(const Pawn&amp;, int)</a> </dd>
+<dd>
+<a class="el" href="class_enemy.html#a0671c071919730219d1b9934f34bce7c" title="Позволяет получить дополнительные характеристики, которые должны добавиться к текущим перед ударом....">Enemy::get_extra_specifications(const Pawn&amp;, int)</a> </dd>
+<dd>
+<a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00134">134</a></p>
+
+</div>
+</div>
+<a id="a6e095db7ffa7465a574cb3f9ea5d2a78" name="a6e095db7ffa7465a574cb3f9ea5d2a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e095db7ffa7465a574cb3f9ea5d2a78">&#9670;&#160;</a></span>no_posteffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int no_posteffect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>extra_damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-постэффект, считающая урон без модификаций </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов">posteffect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int - урон, наносимый персонажу за удар с учётом постэффекта </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00103">103</a></p>
+
+</div>
+</div>
+<a id="abaa1e851611f8fdb65a706baa006ff09" name="abaa1e851611f8fdb65a706baa006ff09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa1e851611f8fdb65a706baa006ff09">&#9670;&#160;</a></span>shield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shield </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>damager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>extra_damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция, соответствующая постэффекту "щит". Если сила self больше силы damager, то урона будет нанесено на 3 меньше (как максимум) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов">posteffect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int - урон, наносимый персонажу за удар с учётом постэффекта </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<a id="a244cd60d12f50b939202d39cbeefbaba" name="a244cd60d12f50b939202d39cbeefbaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244cd60d12f50b939202d39cbeefbaba">&#9670;&#160;</a></span>slimed_damage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int slimed_damage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>damager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>extra_damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-постэффект, ослабляющая рубящее оружее: убирает урон от оружия полностью, но оставляет от всего остального </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов">posteffect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int - урон, наносимый персонажу за удар с учётом постэффекта </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00082">82</a></p>
+
+</div>
+</div>
+<a id="abb16722ffe0d824048158fe31cdbaadb" name="abb16722ffe0d824048158fe31cdbaadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb16722ffe0d824048158fe31cdbaadb">&#9670;&#160;</a></span>stone_skin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stone_skin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>damager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>extra_damage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция, соответствующая постэффекту "каменная кожа". Получаемы урон снижается на значение выносливости self. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов">posteffect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int - урон, наносимый персонажу за удар с учётом постэффекта </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="a4bfe773a5d88d321a21856ab808b2259" name="a4bfe773a5d88d321a21856ab808b2259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfe773a5d88d321a21856ab808b2259">&#9670;&#160;</a></span>posteffect_enum_func_relation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt;<a class="el" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a>, <a class="el" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b">posteffect_func_type</a>&gt; posteffect_enum_func_relation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaffdd98146fb0c71b3381f94b036a100f">SHIELD</a>, <a class="code hl_function" href="#abaa1e851611f8fdb65a706baa006ff09">shield</a>}, {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2">NO_POST_EFFECT</a>, <a class="code hl_function" href="#a6e095db7ffa7465a574cb3f9ea5d2a78">no_posteffect</a>}, {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9">STONE_SKIN</a>, <a class="code hl_function" href="#abb16722ffe0d824048158fe31cdbaadb">stone_skin</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aab6456c4d2b5e26b9824ed667afa65910">SLIMED_DAMAGE</a>, <a class="code hl_function" href="#a244cd60d12f50b939202d39cbeefbaba">slimed_damage</a>}, {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaaa8a8f58642f4b64c879bbde618fec27">DOUBLE_DAMAGE_ON_CRUSHING</a>, <a class="code hl_function" href="#a57ab0f681fa6f27998caad67c73d60a2">double_damage_on_crushing</a>}</div>
+<div class="line">}</div>
+<div class="ttc" id="a_post_effects_8cpp_html_a244cd60d12f50b939202d39cbeefbaba"><div class="ttname"><a href="#a244cd60d12f50b939202d39cbeefbaba">slimed_damage</a></div><div class="ttdeci">int slimed_damage(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-постэффект, ослабляющая рубящее оружее: убирает урон от оружия полностью, но оставляет от все...</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8cpp_source.html#l00082">PostEffects.cpp:82</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a57ab0f681fa6f27998caad67c73d60a2"><div class="ttname"><a href="#a57ab0f681fa6f27998caad67c73d60a2">double_damage_on_crushing</a></div><div class="ttdeci">int double_damage_on_crushing(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-постэффект, усиливающая действие дробящего оружия: увеличивается вдвое урон</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8cpp_source.html#l00060">PostEffects.cpp:60</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a6e095db7ffa7465a574cb3f9ea5d2a78"><div class="ttname"><a href="#a6e095db7ffa7465a574cb3f9ea5d2a78">no_posteffect</a></div><div class="ttdeci">int no_posteffect(const Pawn &amp;self, const Pawn &amp;target, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-постэффект, считающая урон без модификаций</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8cpp_source.html#l00103">PostEffects.cpp:103</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_abaa1e851611f8fdb65a706baa006ff09"><div class="ttname"><a href="#abaa1e851611f8fdb65a706baa006ff09">shield</a></div><div class="ttdeci">int shield(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция, соответствующая постэффекту &quot;щит&quot;. Если сила self больше силы damager, то урона будет нанесе...</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8cpp_source.html#l00015">PostEffects.cpp:15</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_abb16722ffe0d824048158fe31cdbaadb"><div class="ttname"><a href="#abb16722ffe0d824048158fe31cdbaadb">stone_skin</a></div><div class="ttdeci">int stone_skin(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция, соответствующая постэффекту &quot;каменная кожа&quot;. Получаемы урон снижается на значение выносливос...</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8cpp_source.html#l00043">PostEffects.cpp:43</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aaaa8a8f58642f4b64c879bbde618fec27"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaaa8a8f58642f4b64c879bbde618fec27">DOUBLE_DAMAGE_ON_CRUSHING</a></div><div class="ttdeci">@ DOUBLE_DAMAGE_ON_CRUSHING</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aab6456c4d2b5e26b9824ed667afa65910"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aab6456c4d2b5e26b9824ed667afa65910">SLIMED_DAMAGE</a></div><div class="ttdeci">@ SLIMED_DAMAGE</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aaffdd98146fb0c71b3381f94b036a100f"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaffdd98146fb0c71b3381f94b036a100f">SHIELD</a></div><div class="ttdeci">@ SHIELD</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+</div><!-- fragment -->
+<p>Соотношение тегов постэффекта с его функцией </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_post_effects_8cpp_source.html">PostEffects.cpp</a> строка <a class="el" href="_post_effects_8cpp_source.html#l00108">108</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li><li class="navelem"><a href="_post_effects_8cpp.html">PostEffects.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

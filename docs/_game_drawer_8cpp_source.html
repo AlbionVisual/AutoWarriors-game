@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Исходный файл src/visualisation/GameDrawer.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_game_drawer_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GameDrawer.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_drawer_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_game_drawer_8h.html">GameDrawer.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_console_utils_8h.html">../utils/ConsoleUtils.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_game_drawer.html#ab17caed491b6495797628970d86cdd99">   13</a></span><a class="code hl_function" href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">GameDrawer::GameDrawer</a>(<a class="code hl_class" href="class_player.html">Player</a>&amp; pl) : <a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>(&amp;pl), <a class="code hl_variable" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">cashed_player_state</a>(<a class="code hl_class" href="class_player.html">Player</a>(pl)) {};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">GameDrawer::freeze</a>(<span class="keywordtype">size_t</span> seconds) { this_thread::sleep_for(chrono::seconds(seconds)); };</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_game_drawer.html#ab7756c3b507fec47caeef6d8069df95b">   37</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#ab7756c3b507fec47caeef6d8069df95b">GameDrawer::add_enemy</a>(<a class="code hl_class" href="class_enemy.html">Enemy</a>&amp; en) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> &gt; 0) <a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[<a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> - 1] = *<a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a> = &amp;en;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[<a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a>++] = en;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_game_drawer.html#acfa567bd957b63e6f5e78ff33a90ef76">   53</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#acfa567bd957b63e6f5e78ff33a90ef76">GameDrawer::change_attack_direction</a>(<span class="keywordtype">bool</span> new_direction) { <a class="code hl_variable" href="class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd">attack_left</a> = new_direction; };</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">   76</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">GameDrawer::colored_print</a>(<span class="keywordtype">int</span> n1, <span class="keywordtype">int</span> n2) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">bool</span> selection_enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (n1 &gt; n2) { <span class="comment">// Если изменение в положительную сторону</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>(<a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa5dba6aadaeed280cd155dd9b3a4ca271">GREEN_WHITE</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        selection_enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n2 &gt; n1) { <span class="comment">// Или если изменения в отрицательную сторону</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>(<a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa9d20a270e52139e9516e2ad47dfba657">RED_WHITE</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        selection_enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">else</span> <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>(); <span class="comment">// Иначе Оставляем без цвета</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::cout &lt;&lt; to_string(n1);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> selection_enabled;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a4023c232880468a2b082263207ee07a7">  104</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#a4023c232880468a2b082263207ee07a7">GameDrawer::redraw_console</a>() {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_function" href="_console_utils_8cpp.html#a3cffe15b7e5d10a108f1734a9640a2c7">clear_console</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// Если есть какие-то новые данные, эта переменная их оттрекает и заставит окно ещё раз</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// перерисоваться, чтобы убрать выделение до следующего кадра. Когда вызывается</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// перерисовка следующего кадра, эта переменная будет всегда false и третьей перерисовки</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// не будет</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> selection_enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    cout &lt;&lt; <span class="stringliteral">&quot;\tAutoWarriors game\n&quot;</span>; <span class="comment">// Начало информационной части консоли</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    cout &lt;&lt; <span class="stringliteral">&quot;Entity\tClass\t\tHealth\tStrength\tAgility\tEndurance\tWeapon: damage\n&quot;</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">for</span> (<span class="keywordtype">short</span> i = <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a>; i &gt;= 0; i--) { <span class="comment">// Обработка статистики для каждой сущности</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_class" href="class_pawn.html">Pawn</a>* pawn = <a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_class" href="class_pawn.html">Pawn</a>* cashed_pawn = &amp;<a class="code hl_variable" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">cashed_player_state</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (i == <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a>) {                <span class="comment">// Первым выводим игрока</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            pawn = <a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            cashed_pawn = &amp;<a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[i];</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span> (i == <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> - 1) {        <span class="comment">// Затем активного врага</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                pawn = <a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">else</span> {                                <span class="comment">// А потом всех остальных</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                pawn = &amp;<a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[i];</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordtype">string</span> pawn_type = (i == <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a>) ? <span class="stringliteral">&quot;Player&quot;</span> : <span class="stringliteral">&quot;Enemy&quot;</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">string</span> visible_name = (i == <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a>) ? <a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>-&gt;get_visible_name() : (i == <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> - 1) ? <a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>-&gt;get_visible_name() : <a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[i].get_visible_name();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        cout &lt;&lt; pawn_type + <span class="stringliteral">&quot;\t&quot;</span> + visible_name + <span class="stringliteral">&quot;\t&quot;</span>; <span class="comment">// Начало вывода статистики одной сущности</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">if</span> (visible_name.length() &lt; 8) cout &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        selection_enabled = <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">colored_print</a>(pawn-&gt;<a class="code hl_variable" href="class_pawn.html#ae16abe10741771eb9bf5a2acafeadd09">health</a>, cashed_pawn-&gt;<a class="code hl_variable" href="class_pawn.html#ae16abe10741771eb9bf5a2acafeadd09">health</a>) | selection_enabled;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        cout &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        selection_enabled = <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">colored_print</a>(pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>, cashed_pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>) | selection_enabled;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        cout &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        selection_enabled = <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">colored_print</a>(pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af4d72149f436ed0a9da5e2034f3284c0">agility</a>, cashed_pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af4d72149f436ed0a9da5e2034f3284c0">agility</a>) | selection_enabled;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        cout &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        selection_enabled = <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">colored_print</a>(pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">endurance</a>, cashed_pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">endurance</a>) | selection_enabled;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        cout &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span> + pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#ade5b2a773e45dd5d19cc1a9c4a509063">weapon_name</a> + <span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        selection_enabled = <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">colored_print</a>(pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a>, cashed_pawn-&gt;<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a>) | selection_enabled;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;                                   <span class="comment">// Конец вывода статистики одной сущности</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> &gt; 0) { <span class="comment">// Если враги есть, то рисуем бой</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">string</span> direction_arrow = <a class="code hl_variable" href="class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd">attack_left</a> ? <span class="stringliteral">&quot;&lt;--&quot;</span> : <span class="stringliteral">&quot;--&gt;&quot;</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        cout &lt;&lt; <span class="stringliteral">&quot;\t\t&quot;</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>-&gt;health &lt; <a class="code hl_variable" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">cashed_player_state</a>.health) { <span class="comment">// Если есть изменения в здоровье игрока, то отображаем это слева</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>(<a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa9d20a270e52139e9516e2ad47dfba657">RED_WHITE</a>);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            cout &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> + to_string(<a class="code hl_variable" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">cashed_player_state</a>.health - <a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>-&gt;health);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            selection_enabled = <span class="keyword">true</span>; <span class="comment">// Тоже просим перерисовать консоль, чтобы через секунду это выделение пропало</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        cout &lt;&lt; <span class="stringliteral">&quot;\tYou\t&quot;</span> + direction_arrow + <span class="stringliteral">&quot;\t&quot;</span> + <a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>-&gt;get_visible_name() + <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordtype">int</span>&amp; last_enemy_health = <a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>-&gt;health;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordtype">int</span>&amp; last_cashed_enemy_health = <a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[<a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> - 1].health;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (last_enemy_health &lt; last_cashed_enemy_health) { <span class="comment">// Если есть изменения здоровья врага, то тоже отрисовываем это рядом с врагом</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>(<a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa5dba6aadaeed280cd155dd9b3a4ca271">GREEN_WHITE</a>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            cout &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> + to_string(last_cashed_enemy_health - last_enemy_health);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            selection_enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        cout &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }                         <span class="comment">// Конец отрисовки боя</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// Отрисовка всех активных сообщений (они не учавствуют в автоматической отмене</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// перерисовки, т.к. имеют собсвтенный таймер, поэтому selection_enabled не устанавливается</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// в true, но изменяется оставшееся время)</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> message_iter = <a class="code hl_variable" href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">message_list</a>.begin(); message_iter != <a class="code hl_variable" href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">message_list</a>.end(); message_iter++) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_struct" href="struct_message.html">Message</a>&amp; message = *message_iter;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">if</span> (message.<a class="code hl_variable" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">seconds</a> &lt;= 0) { <span class="comment">// Проверка времени (удаляем, если время истекло)</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keyword">auto</span> temp = message_iter--;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_variable" href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">message_list</a>.erase(temp);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        };</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>(message.<a class="code hl_variable" href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">color</a>); <span class="comment">// Отрисовываем окрашенный текст</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        cout &lt;&lt; message.<a class="code hl_variable" href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">text</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_function" href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a>();</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        message.<a class="code hl_variable" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">seconds</a> -= 1; <span class="comment">// Уменьшаем оставшееся время</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordflow">if</span> (selection_enabled) { <span class="comment">// Если был запрос на отмену временного выделения</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <a class="code hl_function" href="class_game_drawer.html#af312abd99d17f35ec8dbbd4597104746">sync_cache</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <a class="code hl_function" href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">freeze</a>(); <span class="comment">// то вызываем перерисовку после небольшой паузы</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <a class="code hl_function" href="class_game_drawer.html#a4023c232880468a2b082263207ee07a7">redraw_console</a>();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordflow">else</span> <a class="code hl_function" href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">freeze</a>(); <span class="comment">// Или просто ждём</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>}</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span></div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_game_drawer.html#af312abd99d17f35ec8dbbd4597104746">  198</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#af312abd99d17f35ec8dbbd4597104746">GameDrawer::sync_cache</a>() {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[<a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> - 1] = *<a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_variable" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">cashed_player_state</a> = *<a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>}</div>
+</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span></div>
+<div class="foldopen" id="foldopen00254" data-start="{" data-end="}">
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a2247b93f7b954268e56c65bfcf3d80c5">  254</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#a2247b93f7b954268e56c65bfcf3d80c5">GameDrawer::add_message</a>(std::string text, <span class="keywordtype">int</span> seconds, <a class="code hl_enumeration" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a> color) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <a class="code hl_variable" href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">message_list</a>.push_back(<a class="code hl_struct" href="struct_message.html">Message</a>(text, seconds, color));</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>};</div>
+</div>
+<div class="ttc" id="a_console_utils_8cpp_html_a0c29e022d9a09e02ffb59b33eaaa5955"><div class="ttname"><a href="_console_utils_8cpp.html#a0c29e022d9a09e02ffb59b33eaaa5955">colorize_text</a></div><div class="ttdeci">void colorize_text(ConsoleColor color=BLACK_WHITE)</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8cpp_source.html#l00113">ConsoleUtils.cpp:113</a></div></div>
+<div class="ttc" id="a_console_utils_8cpp_html_a3cffe15b7e5d10a108f1734a9640a2c7"><div class="ttname"><a href="_console_utils_8cpp.html#a3cffe15b7e5d10a108f1734a9640a2c7">clear_console</a></div><div class="ttdeci">void clear_console()</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8cpp_source.html#l00088">ConsoleUtils.cpp:88</a></div></div>
+<div class="ttc" id="a_console_utils_8h_html"><div class="ttname"><a href="_console_utils_8h.html">ConsoleUtils.h</a></div><div class="ttdoc">Кроссплатформенные функции для работы с консолью, а также перечисление с поддерживаемыми цветами для ...</div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aada"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a></div><div class="ttdeci">ConsoleColor</div><div class="ttdoc">Выбор цвета для консоли (цвет фона _ цвет текста)</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aadaa5dba6aadaeed280cd155dd9b3a4ca271"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa5dba6aadaeed280cd155dd9b3a4ca271">GREEN_WHITE</a></div><div class="ttdeci">@ GREEN_WHITE</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aadaa9d20a270e52139e9516e2ad47dfba657"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa9d20a270e52139e9516e2ad47dfba657">RED_WHITE</a></div><div class="ttdeci">@ RED_WHITE</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_game_drawer_8h_html"><div class="ttname"><a href="_game_drawer_8h.html">GameDrawer.h</a></div><div class="ttdoc">Здесь описываются класс отрисовщика окна, а также вспомогательной структуры Message для передачи сооб...</div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">Класс доопределяющий поведение врагов</div><div class="ttdef"><b>Определения</b> <a href="_enemy_8h_source.html#l00030">Enemy.h:30</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a2247b93f7b954268e56c65bfcf3d80c5"><div class="ttname"><a href="class_game_drawer.html#a2247b93f7b954268e56c65bfcf3d80c5">GameDrawer::add_message</a></div><div class="ttdeci">void add_message(string text, int seconds, ConsoleColor color=BLACK_WHITE)</div><div class="ttdoc">Функция передаваемая в качестве external_printer в функции-эффекты и постэффекты. Отвечает за сохране...</div><div class="ttdef"><b>Определения</b> <a href="#l00254">GameDrawer.cpp:254</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a33960ac97e97fba61e315dc43e0667dd"><div class="ttname"><a href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">GameDrawer::message_list</a></div><div class="ttdeci">vector&lt; Message &gt; message_list</div><div class="ttdoc">Список всех сообщений для отображения (удаляются при seconds = 0)</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00062">GameDrawer.h:62</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a4023c232880468a2b082263207ee07a7"><div class="ttname"><a href="class_game_drawer.html#a4023c232880468a2b082263207ee07a7">GameDrawer::redraw_console</a></div><div class="ttdeci">void redraw_console()</div><div class="ttdoc">Очищает консоль, а затем выводит сохранённую информацию каждый раз одинаково. Изменённая информация с...</div><div class="ttdef"><b>Определения</b> <a href="#l00104">GameDrawer.cpp:104</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a508058f260994f311a94c9061c676be7"><div class="ttname"><a href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">GameDrawer::cashed_player_state</a></div><div class="ttdeci">Player cashed_player_state</div><div class="ttdoc">Сохранённое значение персонажа игрока с прошлого раунда для сравнения с новым</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00065">GameDrawer.h:65</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a66b63270c254639c635724c6e1ce3292"><div class="ttname"><a href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">GameDrawer::freeze</a></div><div class="ttdeci">void freeze(size_t seconds=1)</div><div class="ttdoc">Останавливает единственный поток выполнения кода на определённое время</div><div class="ttdef"><b>Определения</b> <a href="#l00025">GameDrawer.cpp:25</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a7fc280f4d166d7f4c7ec0bedcc506524"><div class="ttname"><a href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">GameDrawer::GameDrawer</a></div><div class="ttdeci">GameDrawer()</div><div class="ttdoc">Пустой конструктор для инициализации полей. Объект не может использоваться в таком виде</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00079">GameDrawer.h:79</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a832b74d832a8c8d52709b8d903d92b0a"><div class="ttname"><a href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">GameDrawer::colored_print</a></div><div class="ttdeci">bool colored_print(int n1, int n2)</div><div class="ttdoc">Выводит число с соответствующим цветом: зелёным (если число увеличилось с предыдущего кадра),...</div><div class="ttdef"><b>Определения</b> <a href="#l00076">GameDrawer.cpp:76</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a8a85e638f4b41d80163011de7ebdd9cf"><div class="ttname"><a href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">GameDrawer::active_enemy_state</a></div><div class="ttdeci">Enemy * active_enemy_state</div><div class="ttdoc">Текущее состояние врага, с которым идёт бой</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00053">GameDrawer.h:53</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a9986a9444632261390fa49dd6bfad806"><div class="ttname"><a href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">GameDrawer::player_state</a></div><div class="ttdeci">Player * player_state</div><div class="ttdoc">Текущее состояние игрока</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00050">GameDrawer.h:50</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_aaabc04fddbbcd90f6fe76e21c8d964cd"><div class="ttname"><a href="class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd">GameDrawer::attack_left</a></div><div class="ttdeci">bool attack_left</div><div class="ttdoc">Сохраняет направление стрелки соответствующее направлению атаки (слева игрок, справа его враг)</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00059">GameDrawer.h:59</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_ab7756c3b507fec47caeef6d8069df95b"><div class="ttname"><a href="class_game_drawer.html#ab7756c3b507fec47caeef6d8069df95b">GameDrawer::add_enemy</a></div><div class="ttdeci">void add_enemy(Enemy &amp;en)</div><div class="ttdoc">Добавляет врага и обновляет кэшированное состояние списка врагов</div><div class="ttdef"><b>Определения</b> <a href="#l00037">GameDrawer.cpp:37</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_ab87896d0b10b73a8ba400325ea64dd9d"><div class="ttname"><a href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">GameDrawer::cashed_enemies_state</a></div><div class="ttdeci">Enemy cashed_enemies_state[5]</div><div class="ttdoc">Сохранённые значения персонажей врагов с прошлых раундов для сравнения с новым, а также для вывода ис...</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00068">GameDrawer.h:68</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_ac6c7b3c289423abca9a480411d5f0ba7"><div class="ttname"><a href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">GameDrawer::enemies_amount</a></div><div class="ttdeci">size_t enemies_amount</div><div class="ttdoc">Количество врагов на поле (и побеждённые, и активный учитываются)</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00056">GameDrawer.h:56</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_acfa567bd957b63e6f5e78ff33a90ef76"><div class="ttname"><a href="class_game_drawer.html#acfa567bd957b63e6f5e78ff33a90ef76">GameDrawer::change_attack_direction</a></div><div class="ttdeci">void change_attack_direction(bool new_direction)</div><div class="ttdoc">Изменяет направление атаки (изменяется только направление стрелки)</div><div class="ttdef"><b>Определения</b> <a href="#l00053">GameDrawer.cpp:53</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_af312abd99d17f35ec8dbbd4597104746"><div class="ttname"><a href="class_game_drawer.html#af312abd99d17f35ec8dbbd4597104746">GameDrawer::sync_cache</a></div><div class="ttdeci">void sync_cache()</div><div class="ttdoc">Обновляет кэшированные данные (сохраняет текущие в переменные кэша)</div><div class="ttdef"><b>Определения</b> <a href="#l00198">GameDrawer.cpp:198</a></div></div>
+<div class="ttc" id="aclass_pawn_html"><div class="ttname"><a href="class_pawn.html">Pawn</a></div><div class="ttdoc">Абстрактный класс любого персонажа в игре, будь то игрок или враг.</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00055">Pawn.h:55</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a53dc41ef98f5cbf61a49ae852123d188"><div class="ttname"><a href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">Pawn::active_weapon</a></div><div class="ttdeci">Weapon active_weapon</div><div class="ttdoc">Активное оружие</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00069">Pawn.h:69</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a6e84fb1426205d487534c3975feb6e0e"><div class="ttname"><a href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">Pawn::specifications</a></div><div class="ttdeci">pawn_specifications specifications</div><div class="ttdoc">Стандартные характеристики персонажа. Каждый удар идёт расчёт дополнительных характеристик независимо...</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00063">Pawn.h:63</a></div></div>
+<div class="ttc" id="aclass_pawn_html_ae16abe10741771eb9bf5a2acafeadd09"><div class="ttname"><a href="class_pawn.html#ae16abe10741771eb9bf5a2acafeadd09">Pawn::health</a></div><div class="ttdeci">int health</div><div class="ttdoc">Здоровье персонажа</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00066">Pawn.h:66</a></div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Класс доопределяющий логику для персонажей игрока</div><div class="ttdef"><b>Определения</b> <a href="_player_8h_source.html#l00027">Player.h:27</a></div></div>
+<div class="ttc" id="astruct_message_html"><div class="ttname"><a href="struct_message.html">Message</a></div><div class="ttdoc">Вспомогательная структура для передачи сообщения с учётом времени отображения и цвета</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00027">GameDrawer.h:27</a></div></div>
+<div class="ttc" id="astruct_message_html_a32aa4093e4fef523dde938b54c67d1eb"><div class="ttname"><a href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">Message::seconds</a></div><div class="ttdeci">int seconds</div><div class="ttdoc">Время в секундах отображения на экране (без учёта ввода игрока)</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00038">GameDrawer.h:38</a></div></div>
+<div class="ttc" id="astruct_message_html_a4363551556e5432d6b10d4a68cd156b4"><div class="ttname"><a href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">Message::text</a></div><div class="ttdeci">string text</div><div class="ttdoc">Текст сообщения</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00032">GameDrawer.h:32</a></div></div>
+<div class="ttc" id="astruct_message_html_aaeef31c553760ff36934bf1cbf4afce9"><div class="ttname"><a href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">Message::color</a></div><div class="ttdeci">ConsoleColor color</div><div class="ttdoc">Цвет сообщения, соответствующий возможным цветам консоли</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00035">GameDrawer.h:35</a></div></div>
+<div class="ttc" id="astruct_weapon_html_abb463127151d807804c556ddbd767e18"><div class="ttname"><a href="struct_weapon.html#abb463127151d807804c556ddbd767e18">Weapon::damage</a></div><div class="ttdeci">int damage</div><div class="ttdoc">Урон, наносимый оружием</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00031">Weapon.h:31</a></div></div>
+<div class="ttc" id="astruct_weapon_html_ade5b2a773e45dd5d19cc1a9c4a509063"><div class="ttname"><a href="struct_weapon.html#ade5b2a773e45dd5d19cc1a9c4a509063">Weapon::weapon_name</a></div><div class="ttdeci">string weapon_name</div><div class="ttdoc">Видимое строковое имя оружия</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00037">Weapon.h:37</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_a18095c2212224025db57a1d771896260"><div class="ttname"><a href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">pawn_specifications::endurance</a></div><div class="ttdeci">int endurance</div><div class="ttdoc">Выносливость; каждый бой прибавляет к уровню здоровья это количество поинтов</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00048">Pawn.h:48</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_af4d72149f436ed0a9da5e2034f3284c0"><div class="ttname"><a href="structpawn__specifications.html#af4d72149f436ed0a9da5e2034f3284c0">pawn_specifications::agility</a></div><div class="ttdeci">int agility</div><div class="ttdoc">Ловкость; учитывается при ударе, даёт возможность промоха</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00045">Pawn.h:45</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_af83370da230a58b7ad0d900b45c9a124"><div class="ttname"><a href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">pawn_specifications::strength</a></div><div class="ttdeci">int strength</div><div class="ttdoc">Сила; прибавляется к урону</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00042">Pawn.h:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_df1c2b9ecce7aab48cbe0c420ef3c62c.html">visualisation</a></li><li class="navelem"><a href="_game_drawer_8cpp.html">GameDrawer.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

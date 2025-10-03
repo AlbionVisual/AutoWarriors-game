@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Файл src/data/PlayerData.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_player_data_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл PlayerData.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Начальные данные, которые вполне не сложно вынести в json. Могут возникнуть трудности только с добавлением своих новых эффектов и классов игрока (т. к. там меняется вся логика в их поведени)  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_player_8h_source.html">../characters/Player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_post_effects_8h_source.html">PostEffects.h</a>&quot;</code><br />
+</div>
+<p><a href="_player_data_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:Players" id="r_Players"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html">Players</a></td></tr>
+<tr class="memdesc:namespace_players"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пространство имён для определения данных о предопределённых классах игрока. Все соотношения тут можно настраивать под нужды гейм-дизайнера <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a390da6dbc35425ad98252aa4e55b7355" id="r_a390da6dbc35425ad98252aa4e55b7355"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469">PlayerTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#a390da6dbc35425ad98252aa4e55b7355">Players::TYPES_VALUES</a> [] = { <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469aaff87a68578473045050259194f210b1">OUTLAW</a>, <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469ab57797e35cf830eb3492b3b2829a89d0">WARRIOR</a>, <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469aefe39f0bb6ed8b39ad55678a8b47ca2d">BARBARIAN</a> }</td></tr>
+<tr class="memdesc:a390da6dbc35425ad98252aa4e55b7355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Теги игроков в массиве для доступа к ним по индексу  <br /></td></tr>
+<tr class="memitem:a4b67a8b8244dcc092579f6be00cad084" id="r_a4b67a8b8244dcc092579f6be00cad084"><td class="memItemLeft" align="right" valign="top">const short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#a4b67a8b8244dcc092579f6be00cad084">Players::TYPES_AMOUNT</a> = 3</td></tr>
+<tr class="memdesc:a4b67a8b8244dcc092579f6be00cad084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество игроков (размер массива выше)  <br /></td></tr>
+<tr class="memitem:adcfaa1e8a8ce3b56f012a5801e40424e" id="r_adcfaa1e8a8ce3b56f012a5801e40424e"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469">PlayerTypes</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#adcfaa1e8a8ce3b56f012a5801e40424e">Players::HEALTHES</a> = { {<a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469aaff87a68578473045050259194f210b1">OUTLAW</a>, 4}, {<a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469ab57797e35cf830eb3492b3b2829a89d0">WARRIOR</a>, 5}, {<a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469aefe39f0bb6ed8b39ad55678a8b47ca2d">BARBARIAN</a>, 6} }</td></tr>
+<tr class="memdesc:adcfaa1e8a8ce3b56f012a5801e40424e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тега игрока с начальным значением его здоровья  <br /></td></tr>
+<tr class="memitem:a7a044ff18a5083e70d530060812869c0" id="r_a7a044ff18a5083e70d530060812869c0"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469">PlayerTypes</a>, const <a class="el" href="struct_weapon.html">Weapon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#a7a044ff18a5083e70d530060812869c0">Players::DEFAULT_WEAPONS</a></td></tr>
+<tr class="memdesc:a7a044ff18a5083e70d530060812869c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов игроков с их начальными оружиями  <br /></td></tr>
+<tr class="memitem:a22aa57b0263d3b277c53d6aa480fe492" id="r_a22aa57b0263d3b277c53d6aa480fe492"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469">PlayerTypes</a>, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#a22aa57b0263d3b277c53d6aa480fe492">Players::VISIBLE_NAMES</a></td></tr>
+<tr class="memdesc:a22aa57b0263d3b277c53d6aa480fe492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов игроков с их строковыми именами  <br /></td></tr>
+<tr class="memitem:a04d16c3c51141f92f16393a43e852fca" id="r_a04d16c3c51141f92f16393a43e852fca"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469">PlayerTypes</a>, vector&lt; <a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#a04d16c3c51141f92f16393a43e852fca">Players::EFFECT_RELATION</a></td></tr>
+<tr class="memdesc:a04d16c3c51141f92f16393a43e852fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов игроков с соответствующими бонусами (эффектами) на каждом из трёх уровней  <br /></td></tr>
+<tr class="memitem:aab18063bfeb869bbb171b72213a8bf3f" id="r_aab18063bfeb869bbb171b72213a8bf3f"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_players.html#acc1c7a9267c76cc3ce802839facc0469">PlayerTypes</a>, vector&lt; <a class="el" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_players.html#aab18063bfeb869bbb171b72213a8bf3f">Players::POSTEFFECT_RELATION</a></td></tr>
+<tr class="memdesc:aab18063bfeb869bbb171b72213a8bf3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов игроков с соответствующими бонусами (постэффектами) на каждом из трёх уровней  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Начальные данные, которые вполне не сложно вынести в json. Могут возникнуть трудности только с добавлением своих новых эффектов и классов игрока (т. к. там меняется вся логика в их поведени) </p>
+<dl class="section author"><dt>Автор</dt><dd>Vlad Korzun (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'d.'+'kor'+'zu'+'n.m'+'in'+'sk@'+'gm'+'ail'+'.c'+'om'; return false;">vlad.<span class="obfuscator">.nosp@m.</span>korz<span class="obfuscator">.nosp@m.</span>un.mi<span class="obfuscator">.nosp@m.</span>nsk@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<p>Описывает в пространстве имён <a class="el" href="namespace_players.html" title="Пространство имён для определения данных о предопределённых классах игрока. Все соотношения тут можно...">Players</a></p>
+<dl class="section date"><dt>Дата</dt><dd>2025-10-01 </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_player_data_8h_source.html">PlayerData.h</a></p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li><li class="navelem"><a href="_player_data_8h.html">PlayerData.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

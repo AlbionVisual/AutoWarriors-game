@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: f:/Projects/AutoWarriorsGame/src/characters/Pawn.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('f_1_2_projects_2_auto_warriors_game_2src_2characters_2_pawn_8h-example.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">f:/Projects/AutoWarriorsGame/src/characters/Pawn.h</div></div>
+</div><!--header-->
+<div class="contents">
+<p>Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам</p>
+<p>Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам</p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>На кого идёт удар этим персонажем </td></tr>
+    <tr><td class="paramname">move_number</td><td>Номер хода </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Характеристики, которые нужно добавить перед ударом</dd></dl>
+<p>Используется только в </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1">Pawn::attacked_by(Pawn&amp;, int)</a></dd></dl>
+<p>Также переписывается в </p><dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c">Player::get_extra_specifications(const Pawn&amp;, int)</a> и </dd>
+<dd>
+<a class="el" href="class_enemy.html#a0671c071919730219d1b9934f34bce7c">Enemy::get_extra_specifications(const Pawn&amp;, int)</a></dd></dl>
+<div class="fragment"><div class="line"></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifndef PAWN_ONCE</span></div>
+<div class="line"><span class="preprocessor">#define PAWN_ONCE</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;../data/Weapon.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;../utils/ConsoleUtils.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using </span><a id="_a0" name="_a0"></a><a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> = std::function&lt;void(std::string, <span class="keywordtype">int</span>, <a id="_a1" name="_a1"></a><a class="code hl_enumeration" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a>)&gt;;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span><a id="_a2" name="_a2"></a><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> {</div>
+<div class="line">    <a id="a3" name="a3"></a><a class="code hl_function" href="structpawn__specifications.html#a83e942a66a14a548279f417c2f758465">pawn_specifications</a>(<span class="keywordtype">int</span> s, <span class="keywordtype">int</span> a, <span class="keywordtype">int</span> e);</div>
+<div class="line">    <a class="code hl_function" href="structpawn__specifications.html#a83e942a66a14a548279f417c2f758465">pawn_specifications</a>();</div>
+<div class="line">    <a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a id="a4" name="a4"></a><a class="code hl_function" href="structpawn__specifications.html#afac505bcace8f3382852506a6bc2aec2">operator+</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a5" name="a5"></a><a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a6" name="a6"></a><a class="code hl_variable" href="structpawn__specifications.html#af4d72149f436ed0a9da5e2034f3284c0">agility</a>;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a7" name="a7"></a><a class="code hl_variable" href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">endurance</a>;</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span><a id="_a8" name="_a8"></a><a class="code hl_class" href="class_pawn.html">Pawn</a> {</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">static</span> <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> <a id="a9" name="a9"></a><a class="code hl_variable" href="class_pawn.html#a54cdb2d54ce6774e2539c5ee236cc0ed">external_printer</a>;</div>
+<div class="line"></div>
+<div class="line">    <a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a id="a10" name="a10"></a><a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a11" name="a11"></a><a class="code hl_variable" href="class_pawn.html#ae16abe10741771eb9bf5a2acafeadd09">health</a>;</div>
+<div class="line"></div>
+<div class="line">    <a id="_a12" name="_a12"></a><a class="code hl_struct" href="struct_weapon.html">Weapon</a> <a id="a13" name="a13"></a><a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>;</div>
+<div class="line"> </div>
+<div class="line">    <a id="a14" name="a14"></a><a class="code hl_function" href="class_pawn.html#ab7880b10c514f4b9fab9766fbe7c06fd">Pawn</a>() {};</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">virtual</span> pawn_specifications <a id="a15" name="a15"></a><a class="code hl_function" href="class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e">get_extra_specifications</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_pawn.html#ab7880b10c514f4b9fab9766fbe7c06fd">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number) = 0;</div>
+<div class="line">    <span class="keywordtype">void</span> <a id="a16" name="a16"></a><a class="code hl_function" href="class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1">attacked_by</a>(<a class="code hl_function" href="class_pawn.html#ab7880b10c514f4b9fab9766fbe7c06fd">Pawn</a>&amp; attacker, <span class="keywordtype">int</span> move_number);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a17" name="a17"></a><a class="code hl_function" href="class_pawn.html#a88f1b7c5c02ce8043279dd3d86b76987">apply_damage</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_pawn.html#ab7880b10c514f4b9fab9766fbe7c06fd">Pawn</a>&amp; damager, <span class="keywordtype">int</span> extra_damage, <span class="keywordtype">int</span> move_number);</div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a18" name="a18"></a><a class="code hl_function" href="class_pawn.html#a43021c66565cefb012961cb83c65c251">get_health</a>();</div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a19" name="a19"></a><a class="code hl_function" href="class_pawn.html#ae097eb98a84393ef874cb4b2899a4960">get_agility</a>();</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">// PAWN_ONCE</span></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aada"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a></div><div class="ttdeci">ConsoleColor</div><div class="ttdoc">Выбор цвета для консоли (цвет фона_цвет текста)</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00015">ConsoleUtils.h:15</a></div></div>
+<div class="ttc" id="a_pawn_8h_html_a484bb4edf6d3832d733930e174cd279c"><div class="ttname"><a href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></div><div class="ttdeci">std::function&lt; void(std::string, int, ConsoleColor)&gt; printer_type</div><div class="ttdoc">Тип функции вывода сообщения на экран, для сохранения в качестве статичного поля и последующего испол...</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00023">Pawn.h:23</a></div></div>
+<div class="ttc" id="aclass_pawn_html"><div class="ttname"><a href="class_pawn.html">Pawn</a></div><div class="ttdoc">Абстрактный класс любого персонажа в игре, будь то игрок или враг.</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00054">Pawn.h:54</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a43021c66565cefb012961cb83c65c251"><div class="ttname"><a href="class_pawn.html#a43021c66565cefb012961cb83c65c251">Pawn::get_health</a></div><div class="ttdeci">int get_health()</div><div class="ttdoc">Получить здоровье</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8cpp_source.html#l00127">Pawn.cpp:127</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a4f4b6afe47057f76a302ac25b3f25d3e"><div class="ttname"><a href="class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e">Pawn::get_extra_specifications</a></div><div class="ttdeci">virtual pawn_specifications get_extra_specifications(const Pawn &amp;target, int move_number)=0</div></div>
+<div class="ttc" id="aclass_pawn_html_a53dc41ef98f5cbf61a49ae852123d188"><div class="ttname"><a href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">Pawn::active_weapon</a></div><div class="ttdeci">Weapon active_weapon</div><div class="ttdoc">Активное оружие</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00068">Pawn.h:68</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a54cdb2d54ce6774e2539c5ee236cc0ed"><div class="ttname"><a href="class_pawn.html#a54cdb2d54ce6774e2539c5ee236cc0ed">Pawn::external_printer</a></div><div class="ttdeci">static printer_type external_printer</div><div class="ttdoc">Статичное поле для хранения доступа к функции-принтеру цветных сообщений на экране</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00059">Pawn.h:59</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a6e84fb1426205d487534c3975feb6e0e"><div class="ttname"><a href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">Pawn::specifications</a></div><div class="ttdeci">pawn_specifications specifications</div><div class="ttdoc">Стандартные характеристики персонажа. Каждый удар идёт расчёт дополнительных характеристик независимо...</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00062">Pawn.h:62</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a88f1b7c5c02ce8043279dd3d86b76987"><div class="ttname"><a href="class_pawn.html#a88f1b7c5c02ce8043279dd3d86b76987">Pawn::apply_damage</a></div><div class="ttdeci">virtual void apply_damage(const Pawn &amp;damager, int extra_damage, int move_number)</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8cpp_source.html#l00117">Pawn.cpp:117</a></div></div>
+<div class="ttc" id="aclass_pawn_html_ab7880b10c514f4b9fab9766fbe7c06fd"><div class="ttname"><a href="class_pawn.html#ab7880b10c514f4b9fab9766fbe7c06fd">Pawn::Pawn</a></div><div class="ttdeci">Pawn()</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00070">Pawn.h:70</a></div></div>
+<div class="ttc" id="aclass_pawn_html_ae097eb98a84393ef874cb4b2899a4960"><div class="ttname"><a href="class_pawn.html#ae097eb98a84393ef874cb4b2899a4960">Pawn::get_agility</a></div><div class="ttdeci">int get_agility()</div><div class="ttdoc">Получить выносливость</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8cpp_source.html#l00134">Pawn.cpp:134</a></div></div>
+<div class="ttc" id="aclass_pawn_html_ae16abe10741771eb9bf5a2acafeadd09"><div class="ttname"><a href="class_pawn.html#ae16abe10741771eb9bf5a2acafeadd09">Pawn::health</a></div><div class="ttdeci">int health</div><div class="ttdoc">Здоровье персонажа</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00065">Pawn.h:65</a></div></div>
+<div class="ttc" id="aclass_pawn_html_afc0fa27e59d8c6bee2b562861eb001f1"><div class="ttname"><a href="class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1">Pawn::attacked_by</a></div><div class="ttdeci">void attacked_by(Pawn &amp;attacker, int move_number)</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8cpp_source.html#l00085">Pawn.cpp:85</a></div></div>
+<div class="ttc" id="astruct_weapon_html"><div class="ttname"><a href="struct_weapon.html">Weapon</a></div><div class="ttdoc">Структура для хранения характеристик оружия</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00014">Weapon.h:14</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html"><div class="ttname"><a href="structpawn__specifications.html">pawn_specifications</a></div><div class="ttdoc">Структура для хранения и передачи статичных значений характеристик персонажей</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00035">Pawn.h:35</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_a18095c2212224025db57a1d771896260"><div class="ttname"><a href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">pawn_specifications::endurance</a></div><div class="ttdeci">int endurance</div><div class="ttdoc">Выносливость; каждый бой прибавляет к уровню здоровья это количество поинтов</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00047">Pawn.h:47</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_a83e942a66a14a548279f417c2f758465"><div class="ttname"><a href="structpawn__specifications.html#a83e942a66a14a548279f417c2f758465">pawn_specifications::pawn_specifications</a></div><div class="ttdeci">pawn_specifications()</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8cpp_source.html#l00036">Pawn.cpp:36</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_af4d72149f436ed0a9da5e2034f3284c0"><div class="ttname"><a href="structpawn__specifications.html#af4d72149f436ed0a9da5e2034f3284c0">pawn_specifications::agility</a></div><div class="ttdeci">int agility</div><div class="ttdoc">Ловкость; учитывается при ударе, даёт возможность промоха</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00044">Pawn.h:44</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_af83370da230a58b7ad0d900b45c9a124"><div class="ttname"><a href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">pawn_specifications::strength</a></div><div class="ttdeci">int strength</div><div class="ttdoc">Сила; прибавляется к урона</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00041">Pawn.h:41</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_afac505bcace8f3382852506a6bc2aec2"><div class="ttname"><a href="structpawn__specifications.html#afac505bcace8f3382852506a6bc2aec2">pawn_specifications::operator+</a></div><div class="ttdeci">pawn_specifications operator+(const pawn_specifications &amp;other) const</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8cpp_source.html#l00062">Pawn.cpp:62</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

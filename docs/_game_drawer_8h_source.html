@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Исходный файл src/visualisation/GameDrawer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_game_drawer_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GameDrawer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_drawer_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef GAME_DRAWER_ONCE</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define GAME_DRAWER_ONCE</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_player_8h.html">../characters/Player.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_enemy_8h.html">../characters/Enemy.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_console_utils_8h.html">../utils/ConsoleUtils.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_message.html">   27</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_message.html#a4fc4f717b634e66070366cb7722d7761">Message</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_message.html#a4fc4f717b634e66070366cb7722d7761">   28</a></span>    <a class="code hl_function" href="struct_message.html#a4fc4f717b634e66070366cb7722d7761">Message</a>() {};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_message.html#a63c31235f4cfeb613655c0d15dc1390e">   29</a></span>    <a class="code hl_function" href="struct_message.html#a63c31235f4cfeb613655c0d15dc1390e">Message</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">text</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">seconds</a>, <a class="code hl_enumeration" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a> <a class="code hl_variable" href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">color</a> = <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>) : <a class="code hl_variable" href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">text</a>(<a class="code hl_variable" href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">text</a>), <a class="code hl_variable" href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">color</a>(<a class="code hl_variable" href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">color</a>), <a class="code hl_variable" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">seconds</a>(<a class="code hl_variable" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">seconds</a>) {};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">   32</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">text</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">   35</a></span>    <a class="code hl_enumeration" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a> <a class="code hl_variable" href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">color</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">seconds</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_game_drawer.html">   48</a></span><span class="keyword">class </span><a class="code hl_function" href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">GameDrawer</a> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">   50</a></span>    <a class="code hl_class" href="class_player.html">Player</a>* <a class="code hl_variable" href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">player_state</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">   53</a></span>    <a class="code hl_class" href="class_enemy.html">Enemy</a>* <a class="code hl_variable" href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">active_enemy_state</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">   56</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">enemies_amount</a> = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd">   59</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd">attack_left</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">   62</a></span>    vector&lt;Message&gt; <a class="code hl_variable" href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">message_list</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">   65</a></span>    <a class="code hl_class" href="class_player.html">Player</a> <a class="code hl_variable" href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">cashed_player_state</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">   68</a></span>    <a class="code hl_class" href="class_enemy.html">Enemy</a> <a class="code hl_variable" href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">cashed_enemies_state</a>[5];</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">colored_print</a>(<span class="keywordtype">int</span> n1, <span class="keywordtype">int</span> n2);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#af312abd99d17f35ec8dbbd4597104746">sync_cache</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">   79</a></span>    <a class="code hl_function" href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">GameDrawer</a>() {};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_function" href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">GameDrawer</a>(<a class="code hl_class" href="class_player.html">Player</a>&amp; pl);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">freeze</a>(<span class="keywordtype">size_t</span> seconds = 1);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#ab7756c3b507fec47caeef6d8069df95b">add_enemy</a>(<a class="code hl_class" href="class_enemy.html">Enemy</a>&amp; en);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#acfa567bd957b63e6f5e78ff33a90ef76">change_attack_direction</a>(<span class="keywordtype">bool</span> new_direction);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#a4023c232880468a2b082263207ee07a7">redraw_console</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_drawer.html#a2247b93f7b954268e56c65bfcf3d80c5">add_message</a>(<span class="keywordtype">string</span> text, <span class="keywordtype">int</span> seconds, <a class="code hl_enumeration" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a> color = <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">// GAME_DRAWER_ONCE</span></div>
+<div class="ttc" id="a_console_utils_8h_html"><div class="ttname"><a href="_console_utils_8h.html">ConsoleUtils.h</a></div><div class="ttdoc">Кроссплатформенные функции для работы с консолью, а также перечисление с поддерживаемыми цветами для ...</div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aada"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aada">ConsoleColor</a></div><div class="ttdeci">ConsoleColor</div><div class="ttdoc">Выбор цвета для консоли (цвет фона _ цвет текста)</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a></div><div class="ttdeci">@ BLACK_WHITE</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_enemy_8h_html"><div class="ttname"><a href="_enemy_8h.html">Enemy.h</a></div><div class="ttdoc">Здесь описывается класс для доопределения врагов, а также перечисление их тегов</div></div>
+<div class="ttc" id="a_player_8h_html"><div class="ttname"><a href="_player_8h.html">Player.h</a></div><div class="ttdoc">Здесь описывается класс, доопределяющий поведение персонажа для игрока, а также перечисление тегов иг...</div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">Класс доопределяющий поведение врагов</div><div class="ttdef"><b>Определения</b> <a href="_enemy_8h_source.html#l00030">Enemy.h:30</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a2247b93f7b954268e56c65bfcf3d80c5"><div class="ttname"><a href="class_game_drawer.html#a2247b93f7b954268e56c65bfcf3d80c5">GameDrawer::add_message</a></div><div class="ttdeci">void add_message(string text, int seconds, ConsoleColor color=BLACK_WHITE)</div><div class="ttdoc">Функция передаваемая в качестве external_printer в функции-эффекты и постэффекты. Отвечает за сохране...</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00254">GameDrawer.cpp:254</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a33960ac97e97fba61e315dc43e0667dd"><div class="ttname"><a href="class_game_drawer.html#a33960ac97e97fba61e315dc43e0667dd">GameDrawer::message_list</a></div><div class="ttdeci">vector&lt; Message &gt; message_list</div><div class="ttdoc">Список всех сообщений для отображения (удаляются при seconds = 0)</div><div class="ttdef"><b>Определения</b> <a href="#l00062">GameDrawer.h:62</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a4023c232880468a2b082263207ee07a7"><div class="ttname"><a href="class_game_drawer.html#a4023c232880468a2b082263207ee07a7">GameDrawer::redraw_console</a></div><div class="ttdeci">void redraw_console()</div><div class="ttdoc">Очищает консоль, а затем выводит сохранённую информацию каждый раз одинаково. Изменённая информация с...</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00104">GameDrawer.cpp:104</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a508058f260994f311a94c9061c676be7"><div class="ttname"><a href="class_game_drawer.html#a508058f260994f311a94c9061c676be7">GameDrawer::cashed_player_state</a></div><div class="ttdeci">Player cashed_player_state</div><div class="ttdoc">Сохранённое значение персонажа игрока с прошлого раунда для сравнения с новым</div><div class="ttdef"><b>Определения</b> <a href="#l00065">GameDrawer.h:65</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a66b63270c254639c635724c6e1ce3292"><div class="ttname"><a href="class_game_drawer.html#a66b63270c254639c635724c6e1ce3292">GameDrawer::freeze</a></div><div class="ttdeci">void freeze(size_t seconds=1)</div><div class="ttdoc">Останавливает единственный поток выполнения кода на определённое время</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00025">GameDrawer.cpp:25</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a7fc280f4d166d7f4c7ec0bedcc506524"><div class="ttname"><a href="class_game_drawer.html#a7fc280f4d166d7f4c7ec0bedcc506524">GameDrawer::GameDrawer</a></div><div class="ttdeci">GameDrawer()</div><div class="ttdoc">Пустой конструктор для инициализации полей. Объект не может использоваться в таком виде</div><div class="ttdef"><b>Определения</b> <a href="#l00079">GameDrawer.h:79</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a832b74d832a8c8d52709b8d903d92b0a"><div class="ttname"><a href="class_game_drawer.html#a832b74d832a8c8d52709b8d903d92b0a">GameDrawer::colored_print</a></div><div class="ttdeci">bool colored_print(int n1, int n2)</div><div class="ttdoc">Выводит число с соответствующим цветом: зелёным (если число увеличилось с предыдущего кадра),...</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00076">GameDrawer.cpp:76</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a8a85e638f4b41d80163011de7ebdd9cf"><div class="ttname"><a href="class_game_drawer.html#a8a85e638f4b41d80163011de7ebdd9cf">GameDrawer::active_enemy_state</a></div><div class="ttdeci">Enemy * active_enemy_state</div><div class="ttdoc">Текущее состояние врага, с которым идёт бой</div><div class="ttdef"><b>Определения</b> <a href="#l00053">GameDrawer.h:53</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_a9986a9444632261390fa49dd6bfad806"><div class="ttname"><a href="class_game_drawer.html#a9986a9444632261390fa49dd6bfad806">GameDrawer::player_state</a></div><div class="ttdeci">Player * player_state</div><div class="ttdoc">Текущее состояние игрока</div><div class="ttdef"><b>Определения</b> <a href="#l00050">GameDrawer.h:50</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_aaabc04fddbbcd90f6fe76e21c8d964cd"><div class="ttname"><a href="class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd">GameDrawer::attack_left</a></div><div class="ttdeci">bool attack_left</div><div class="ttdoc">Сохраняет направление стрелки соответствующее направлению атаки (слева игрок, справа его враг)</div><div class="ttdef"><b>Определения</b> <a href="#l00059">GameDrawer.h:59</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_ab7756c3b507fec47caeef6d8069df95b"><div class="ttname"><a href="class_game_drawer.html#ab7756c3b507fec47caeef6d8069df95b">GameDrawer::add_enemy</a></div><div class="ttdeci">void add_enemy(Enemy &amp;en)</div><div class="ttdoc">Добавляет врага и обновляет кэшированное состояние списка врагов</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00037">GameDrawer.cpp:37</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_ab87896d0b10b73a8ba400325ea64dd9d"><div class="ttname"><a href="class_game_drawer.html#ab87896d0b10b73a8ba400325ea64dd9d">GameDrawer::cashed_enemies_state</a></div><div class="ttdeci">Enemy cashed_enemies_state[5]</div><div class="ttdoc">Сохранённые значения персонажей врагов с прошлых раундов для сравнения с новым, а также для вывода ис...</div><div class="ttdef"><b>Определения</b> <a href="#l00068">GameDrawer.h:68</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_ac6c7b3c289423abca9a480411d5f0ba7"><div class="ttname"><a href="class_game_drawer.html#ac6c7b3c289423abca9a480411d5f0ba7">GameDrawer::enemies_amount</a></div><div class="ttdeci">size_t enemies_amount</div><div class="ttdoc">Количество врагов на поле (и побеждённые, и активный учитываются)</div><div class="ttdef"><b>Определения</b> <a href="#l00056">GameDrawer.h:56</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_acfa567bd957b63e6f5e78ff33a90ef76"><div class="ttname"><a href="class_game_drawer.html#acfa567bd957b63e6f5e78ff33a90ef76">GameDrawer::change_attack_direction</a></div><div class="ttdeci">void change_attack_direction(bool new_direction)</div><div class="ttdoc">Изменяет направление атаки (изменяется только направление стрелки)</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00053">GameDrawer.cpp:53</a></div></div>
+<div class="ttc" id="aclass_game_drawer_html_af312abd99d17f35ec8dbbd4597104746"><div class="ttname"><a href="class_game_drawer.html#af312abd99d17f35ec8dbbd4597104746">GameDrawer::sync_cache</a></div><div class="ttdeci">void sync_cache()</div><div class="ttdoc">Обновляет кэшированные данные (сохраняет текущие в переменные кэша)</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8cpp_source.html#l00198">GameDrawer.cpp:198</a></div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Класс доопределяющий логику для персонажей игрока</div><div class="ttdef"><b>Определения</b> <a href="_player_8h_source.html#l00027">Player.h:27</a></div></div>
+<div class="ttc" id="astruct_message_html_a32aa4093e4fef523dde938b54c67d1eb"><div class="ttname"><a href="struct_message.html#a32aa4093e4fef523dde938b54c67d1eb">Message::seconds</a></div><div class="ttdeci">int seconds</div><div class="ttdoc">Время в секундах отображения на экране (без учёта ввода игрока)</div><div class="ttdef"><b>Определения</b> <a href="#l00038">GameDrawer.h:38</a></div></div>
+<div class="ttc" id="astruct_message_html_a4363551556e5432d6b10d4a68cd156b4"><div class="ttname"><a href="struct_message.html#a4363551556e5432d6b10d4a68cd156b4">Message::text</a></div><div class="ttdeci">string text</div><div class="ttdoc">Текст сообщения</div><div class="ttdef"><b>Определения</b> <a href="#l00032">GameDrawer.h:32</a></div></div>
+<div class="ttc" id="astruct_message_html_a4fc4f717b634e66070366cb7722d7761"><div class="ttname"><a href="struct_message.html#a4fc4f717b634e66070366cb7722d7761">Message::Message</a></div><div class="ttdeci">Message()</div><div class="ttdef"><b>Определения</b> <a href="#l00028">GameDrawer.h:28</a></div></div>
+<div class="ttc" id="astruct_message_html_a63c31235f4cfeb613655c0d15dc1390e"><div class="ttname"><a href="struct_message.html#a63c31235f4cfeb613655c0d15dc1390e">Message::Message</a></div><div class="ttdeci">Message(string text, int seconds, ConsoleColor color=BLACK_WHITE)</div><div class="ttdef"><b>Определения</b> <a href="#l00029">GameDrawer.h:29</a></div></div>
+<div class="ttc" id="astruct_message_html_aaeef31c553760ff36934bf1cbf4afce9"><div class="ttname"><a href="struct_message.html#aaeef31c553760ff36934bf1cbf4afce9">Message::color</a></div><div class="ttdeci">ConsoleColor color</div><div class="ttdoc">Цвет сообщения, соответствующий возможным цветам консоли</div><div class="ttdef"><b>Определения</b> <a href="#l00035">GameDrawer.h:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_df1c2b9ecce7aab48cbe0c420ef3c62c.html">visualisation</a></li><li class="navelem"><a href="_game_drawer_8h.html">GameDrawer.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Исходный файл src/data/PostEffects.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_post_effects_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PostEffects.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_post_effects_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_post_effects_8h.html">PostEffects.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>std::to_string;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>std::map;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#abaa1e851611f8fdb65a706baa006ff09">   15</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_post_effects_8cpp.html#abaa1e851611f8fdb65a706baa006ff09">shield</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; damager, <span class="keywordtype">int</span> extra_damage, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> actual_damage = damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a> + extra_damage + damager.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">if</span> (self.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a> &gt; damager.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">if</span> (external_printer) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            external_printer(<span class="stringliteral">&quot;Shield worked (&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">if</span> (actual_damage &lt;= 3) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                external_printer(<span class="stringliteral">&quot;-&quot;</span> + to_string(actual_damage), 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaad4d53b59914a536f06a87a7a8a694231">BLACK_RED</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                external_printer(<span class="stringliteral">&quot; to damage; damage is absorbed)\n&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                external_printer(to_string(-3), 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaad4d53b59914a536f06a87a7a8a694231">BLACK_RED</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                external_printer(<span class="stringliteral">&quot; to damage)\n&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> actual_damage - 3;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> actual_damage;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#abb16722ffe0d824048158fe31cdbaadb">   43</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_post_effects_8cpp.html#abb16722ffe0d824048158fe31cdbaadb">stone_skin</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; damager, <span class="keywordtype">int</span> extra_damage, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">if</span> (external_printer) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        external_printer(<span class="stringliteral">&quot;Stone skin worked (&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        external_printer(<span class="stringliteral">&quot;-&quot;</span> + to_string(self.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">endurance</a>), 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaad4d53b59914a536f06a87a7a8a694231">BLACK_RED</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        external_printer(<span class="stringliteral">&quot; to damage)&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a> + damager.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a> + extra_damage - self.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">endurance</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#a57ab0f681fa6f27998caad67c73d60a2">   60</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_post_effects_8cpp.html#a57ab0f681fa6f27998caad67c73d60a2">double_damage_on_crushing</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; damager, <span class="keywordtype">int</span> extra_damage, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">int</span> actual_damage = damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a> + extra_damage + damager.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> (damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abd5bcb44925ef05765be1ce7168e9d35">damage_type</a> == <a class="code hl_enumvalue" href="_weapon_8h.html#afce48e0416f4e1a1a8c79629bbbf602da499995d883e8edf75088ddc4e6eaabb4">CRUSHING</a>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (external_printer) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            external_printer(<span class="stringliteral">&quot;Used crashing (&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            external_printer(<span class="stringliteral">&quot;+&quot;</span> + to_string(damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a>), 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa563bf8b94b8cb623fd9d17a6511cbad2">BLACK_GREEN</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            external_printer(<span class="stringliteral">&quot; to damage)&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> actual_damage + damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> actual_damage;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#a244cd60d12f50b939202d39cbeefbaba">   82</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_post_effects_8cpp.html#a244cd60d12f50b939202d39cbeefbaba">slimed_damage</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; damager, <span class="keywordtype">int</span> extra_damage, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">int</span> actual_damage = damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a> + extra_damage + damager.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> (damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abd5bcb44925ef05765be1ce7168e9d35">damage_type</a> == <a class="code hl_enumvalue" href="_weapon_8h.html#afce48e0416f4e1a1a8c79629bbbf602dab723c035582dbb386d47310ce7e53692">CHOPPING</a>) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (external_printer) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            external_printer(<span class="stringliteral">&quot;Slime absorption (&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            external_printer(<span class="stringliteral">&quot;-&quot;</span> + to_string(damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a>), 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaad4d53b59914a536f06a87a7a8a694231">BLACK_RED</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            external_printer(<span class="stringliteral">&quot; to damage)&quot;</span>, 2, <a class="code hl_enumvalue" href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> actual_damage - damager.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> actual_damage;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#a6e095db7ffa7465a574cb3f9ea5d2a78">  103</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_post_effects_8cpp.html#a6e095db7ffa7465a574cb3f9ea5d2a78">no_posteffect</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> extra_damage, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> target.<a class="code hl_variable" href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">active_weapon</a>.<a class="code hl_variable" href="struct_weapon.html#abb463127151d807804c556ddbd767e18">damage</a> + target.<a class="code hl_variable" href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">specifications</a>.<a class="code hl_variable" href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">strength</a> + extra_damage;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="};">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#a4bfe773a5d88d321a21856ab808b2259">  108</a></span><span class="keyword">const</span> map&lt;PostEffects, posteffect_func_type&gt; <a class="code hl_variable" href="_post_effects_8cpp.html#a4bfe773a5d88d321a21856ab808b2259">posteffect_enum_func_relation</a> = {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaffdd98146fb0c71b3381f94b036a100f">SHIELD</a>, <a class="code hl_function" href="_post_effects_8cpp.html#abaa1e851611f8fdb65a706baa006ff09">shield</a>}, {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2">NO_POST_EFFECT</a>, <a class="code hl_function" href="_post_effects_8cpp.html#a6e095db7ffa7465a574cb3f9ea5d2a78">no_posteffect</a>}, {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9">STONE_SKIN</a>, <a class="code hl_function" href="_post_effects_8cpp.html#abb16722ffe0d824048158fe31cdbaadb">stone_skin</a>},</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aab6456c4d2b5e26b9824ed667afa65910">SLIMED_DAMAGE</a>, <a class="code hl_function" href="_post_effects_8cpp.html#a244cd60d12f50b939202d39cbeefbaba">slimed_damage</a>}, {<a class="code hl_enumvalue" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaaa8a8f58642f4b64c879bbde618fec27">DOUBLE_DAMAGE_ON_CRUSHING</a>, <a class="code hl_function" href="_post_effects_8cpp.html#a57ab0f681fa6f27998caad67c73d60a2">double_damage_on_crushing</a>}</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="_post_effects_8cpp.html#a4d732f4650baa0766358f8ee35ec74e2">  134</a></span><a class="code hl_typedef" href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b">posteffect_func_type</a> <a class="code hl_function" href="_post_effects_8cpp.html#a4d732f4650baa0766358f8ee35ec74e2">get_posteffect</a>(<a class="code hl_enumeration" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a> effect) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="_post_effects_8cpp.html#a4bfe773a5d88d321a21856ab808b2259">posteffect_enum_func_relation</a>.at(effect);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>};</div>
+</div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa2879550cb7b282e89baaddb83f921d73">BLACK_WHITE</a></div><div class="ttdeci">@ BLACK_WHITE</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aadaa563bf8b94b8cb623fd9d17a6511cbad2"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaa563bf8b94b8cb623fd9d17a6511cbad2">BLACK_GREEN</a></div><div class="ttdeci">@ BLACK_GREEN</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_console_utils_8h_html_a821042d5f30537f776ce823c5d66aadaad4d53b59914a536f06a87a7a8a694231"><div class="ttname"><a href="_console_utils_8h.html#a821042d5f30537f776ce823c5d66aadaad4d53b59914a536f06a87a7a8a694231">BLACK_RED</a></div><div class="ttdeci">@ BLACK_RED</div><div class="ttdef"><b>Определения</b> <a href="_console_utils_8h_source.html#l00017">ConsoleUtils.h:17</a></div></div>
+<div class="ttc" id="a_pawn_8h_html_a484bb4edf6d3832d733930e174cd279c"><div class="ttname"><a href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></div><div class="ttdeci">std::function&lt; void(std::string, int, ConsoleColor)&gt; printer_type</div><div class="ttdoc">Тип функции вывода сообщения на экран, для сохранения в качестве статичного поля и последующего испол...</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00024">Pawn.h:24</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a244cd60d12f50b939202d39cbeefbaba"><div class="ttname"><a href="_post_effects_8cpp.html#a244cd60d12f50b939202d39cbeefbaba">slimed_damage</a></div><div class="ttdeci">int slimed_damage(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-постэффект, ослабляющая рубящее оружее: убирает урон от оружия полностью, но оставляет от все...</div><div class="ttdef"><b>Определения</b> <a href="#l00082">PostEffects.cpp:82</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a4bfe773a5d88d321a21856ab808b2259"><div class="ttname"><a href="_post_effects_8cpp.html#a4bfe773a5d88d321a21856ab808b2259">posteffect_enum_func_relation</a></div><div class="ttdeci">const map&lt; PostEffects, posteffect_func_type &gt; posteffect_enum_func_relation</div><div class="ttdoc">Соотношение тегов постэффекта с его функцией</div><div class="ttdef"><b>Определения</b> <a href="#l00108">PostEffects.cpp:108</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a4d732f4650baa0766358f8ee35ec74e2"><div class="ttname"><a href="_post_effects_8cpp.html#a4d732f4650baa0766358f8ee35ec74e2">get_posteffect</a></div><div class="ttdeci">posteffect_func_type get_posteffect(PostEffects effect)</div><div class="ttdoc">Преобразовывает тег в вызываемую функцию</div><div class="ttdef"><b>Определения</b> <a href="#l00134">PostEffects.cpp:134</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a57ab0f681fa6f27998caad67c73d60a2"><div class="ttname"><a href="_post_effects_8cpp.html#a57ab0f681fa6f27998caad67c73d60a2">double_damage_on_crushing</a></div><div class="ttdeci">int double_damage_on_crushing(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-постэффект, усиливающая действие дробящего оружия: увеличивается вдвое урон</div><div class="ttdef"><b>Определения</b> <a href="#l00060">PostEffects.cpp:60</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_a6e095db7ffa7465a574cb3f9ea5d2a78"><div class="ttname"><a href="_post_effects_8cpp.html#a6e095db7ffa7465a574cb3f9ea5d2a78">no_posteffect</a></div><div class="ttdeci">int no_posteffect(const Pawn &amp;self, const Pawn &amp;target, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-постэффект, считающая урон без модификаций</div><div class="ttdef"><b>Определения</b> <a href="#l00103">PostEffects.cpp:103</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_abaa1e851611f8fdb65a706baa006ff09"><div class="ttname"><a href="_post_effects_8cpp.html#abaa1e851611f8fdb65a706baa006ff09">shield</a></div><div class="ttdeci">int shield(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция, соответствующая постэффекту &quot;щит&quot;. Если сила self больше силы damager, то урона будет нанесе...</div><div class="ttdef"><b>Определения</b> <a href="#l00015">PostEffects.cpp:15</a></div></div>
+<div class="ttc" id="a_post_effects_8cpp_html_abb16722ffe0d824048158fe31cdbaadb"><div class="ttname"><a href="_post_effects_8cpp.html#abb16722ffe0d824048158fe31cdbaadb">stone_skin</a></div><div class="ttdeci">int stone_skin(const Pawn &amp;self, const Pawn &amp;damager, int extra_damage, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция, соответствующая постэффекту &quot;каменная кожа&quot;. Получаемы урон снижается на значение выносливос...</div><div class="ttdef"><b>Определения</b> <a href="#l00043">PostEffects.cpp:43</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html"><div class="ttname"><a href="_post_effects_8h.html">PostEffects.h</a></div><div class="ttdoc">Ряд функций-постэффектов (как они выглядят показано ниже), тип-функция (тоже имеет ту же структуру),...</div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61a"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a></div><div class="ttdeci">PostEffects</div><div class="ttdoc">Теги для функций, в том числе NO_POST_EFFECT</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aa55f82660e5fe2cdfab02c9d21efe57d9">STONE_SKIN</a></div><div class="ttdeci">@ STONE_SKIN</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aaaa8a8f58642f4b64c879bbde618fec27"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaaa8a8f58642f4b64c879bbde618fec27">DOUBLE_DAMAGE_ON_CRUSHING</a></div><div class="ttdeci">@ DOUBLE_DAMAGE_ON_CRUSHING</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aab6456c4d2b5e26b9824ed667afa65910"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aab6456c4d2b5e26b9824ed667afa65910">SLIMED_DAMAGE</a></div><div class="ttdeci">@ SLIMED_DAMAGE</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aad5fd5e32c6a07bd6a677889eb26535c2">NO_POST_EFFECT</a></div><div class="ttdeci">@ NO_POST_EFFECT</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_a64244006d21d14939648fd48c722a61aaffdd98146fb0c71b3381f94b036a100f"><div class="ttname"><a href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61aaffdd98146fb0c71b3381f94b036a100f">SHIELD</a></div><div class="ttdeci">@ SHIELD</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00047">PostEffects.h:47</a></div></div>
+<div class="ttc" id="a_post_effects_8h_html_af172407d15a435fa4057a9b7b92c6a9b"><div class="ttname"><a href="_post_effects_8h.html#af172407d15a435fa4057a9b7b92c6a9b">posteffect_func_type</a></div><div class="ttdeci">std::function&lt; int(const Pawn &amp;, const Pawn &amp;, int, int, printer_type)&gt; posteffect_func_type</div><div class="ttdoc">Тип-функция для сохранения ссылки на какую-то из определённых функций-постэффектов</div><div class="ttdef"><b>Определения</b> <a href="_post_effects_8h_source.html#l00044">PostEffects.h:44</a></div></div>
+<div class="ttc" id="a_weapon_8h_html_afce48e0416f4e1a1a8c79629bbbf602da499995d883e8edf75088ddc4e6eaabb4"><div class="ttname"><a href="_weapon_8h.html#afce48e0416f4e1a1a8c79629bbbf602da499995d883e8edf75088ddc4e6eaabb4">CRUSHING</a></div><div class="ttdeci">@ CRUSHING</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00018">Weapon.h:18</a></div></div>
+<div class="ttc" id="a_weapon_8h_html_afce48e0416f4e1a1a8c79629bbbf602dab723c035582dbb386d47310ce7e53692"><div class="ttname"><a href="_weapon_8h.html#afce48e0416f4e1a1a8c79629bbbf602dab723c035582dbb386d47310ce7e53692">CHOPPING</a></div><div class="ttdeci">@ CHOPPING</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00018">Weapon.h:18</a></div></div>
+<div class="ttc" id="aclass_pawn_html"><div class="ttname"><a href="class_pawn.html">Pawn</a></div><div class="ttdoc">Абстрактный класс любого персонажа в игре, будь то игрок или враг.</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00055">Pawn.h:55</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a53dc41ef98f5cbf61a49ae852123d188"><div class="ttname"><a href="class_pawn.html#a53dc41ef98f5cbf61a49ae852123d188">Pawn::active_weapon</a></div><div class="ttdeci">Weapon active_weapon</div><div class="ttdoc">Активное оружие</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00069">Pawn.h:69</a></div></div>
+<div class="ttc" id="aclass_pawn_html_a6e84fb1426205d487534c3975feb6e0e"><div class="ttname"><a href="class_pawn.html#a6e84fb1426205d487534c3975feb6e0e">Pawn::specifications</a></div><div class="ttdeci">pawn_specifications specifications</div><div class="ttdoc">Стандартные характеристики персонажа. Каждый удар идёт расчёт дополнительных характеристик независимо...</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00063">Pawn.h:63</a></div></div>
+<div class="ttc" id="astruct_weapon_html_abb463127151d807804c556ddbd767e18"><div class="ttname"><a href="struct_weapon.html#abb463127151d807804c556ddbd767e18">Weapon::damage</a></div><div class="ttdeci">int damage</div><div class="ttdoc">Урон, наносимый оружием</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00031">Weapon.h:31</a></div></div>
+<div class="ttc" id="astruct_weapon_html_abd5bcb44925ef05765be1ce7168e9d35"><div class="ttname"><a href="struct_weapon.html#abd5bcb44925ef05765be1ce7168e9d35">Weapon::damage_type</a></div><div class="ttdeci">DamageType damage_type</div><div class="ttdoc">Тип урона, наносимый оружием</div><div class="ttdef"><b>Определения</b> <a href="_weapon_8h_source.html#l00034">Weapon.h:34</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_a18095c2212224025db57a1d771896260"><div class="ttname"><a href="structpawn__specifications.html#a18095c2212224025db57a1d771896260">pawn_specifications::endurance</a></div><div class="ttdeci">int endurance</div><div class="ttdoc">Выносливость; каждый бой прибавляет к уровню здоровья это количество поинтов</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00048">Pawn.h:48</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html_af83370da230a58b7ad0d900b45c9a124"><div class="ttname"><a href="structpawn__specifications.html#af83370da230a58b7ad0d900b45c9a124">pawn_specifications::strength</a></div><div class="ttdeci">int strength</div><div class="ttdoc">Сила; прибавляется к урону</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00042">Pawn.h:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li><li class="navelem"><a href="_post_effects_8cpp.html">PostEffects.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

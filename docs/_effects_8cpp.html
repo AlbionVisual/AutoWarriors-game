@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Файл src/data/Effects.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_effects_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл Effects.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_effects_8h_source.html">Effects.h</a>&quot;</code><br />
+</div>
+<p><a href="_effects_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a290ea20e374e98ab48e1240bcdc9ea1b" id="r_a290ea20e374e98ab48e1240bcdc9ea1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a290ea20e374e98ab48e1240bcdc9ea1b">hidden_attack</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a290ea20e374e98ab48e1240bcdc9ea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект соответствующая навыку "Скрытая атака" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:acaad77a2cd7ebec3cbdf04c26407d661" id="r_acaad77a2cd7ebec3cbdf04c26407d661"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaad77a2cd7ebec3cbdf04c26407d661">rush_to_action</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:acaad77a2cd7ebec3cbdf04c26407d661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект соответствующая навыку "Порыв к действию" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:a9c64b821152199c7aaa1a5be8acedf12" id="r_a9c64b821152199c7aaa1a5be8acedf12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c64b821152199c7aaa1a5be8acedf12">rage</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a9c64b821152199c7aaa1a5be8acedf12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект соответствующая навыку "Ярость" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:a0d3a803419690b71736f266b7f83c373" id="r_a0d3a803419690b71736f266b7f83c373"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d3a803419690b71736f266b7f83c373">strength_boost</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a0d3a803419690b71736f266b7f83c373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект увеличивающая силу на единицу каждый бой <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:aa4211a85c7d817a5992f812096f47dea" id="r_aa4211a85c7d817a5992f812096f47dea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4211a85c7d817a5992f812096f47dea">agility_boost</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:aa4211a85c7d817a5992f812096f47dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект увеличивающая ловкость на единицу каждый бой <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:a9915fe59e1bfd7b774c01672edc1cc68" id="r_a9915fe59e1bfd7b774c01672edc1cc68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9915fe59e1bfd7b774c01672edc1cc68">endurance_boost</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a9915fe59e1bfd7b774c01672edc1cc68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект увеличивающая выносливость на единицу каждый бой <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:a93dedcbc57e910d481ded59bdd6c449e" id="r_a93dedcbc57e910d481ded59bdd6c449e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93dedcbc57e910d481ded59bdd6c449e">poison</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a93dedcbc57e910d481ded59bdd6c449e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект соответствующая способности "яд" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:a985ba61e2d9a95af6bbb287d5322ca09" id="r_a985ba61e2d9a95af6bbb287d5322ca09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a985ba61e2d9a95af6bbb287d5322ca09">fire_breathing</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:a985ba61e2d9a95af6bbb287d5322ca09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-эффект соответствующая навыку "Дыхание огнём" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:af011c5b65e4463553d5f0acccce40658" id="r_af011c5b65e4463553d5f0acccce40658"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af011c5b65e4463553d5f0acccce40658">no_effect</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;self, const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, <a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer)</td></tr>
+<tr class="memdesc:af011c5b65e4463553d5f0acccce40658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пустая функция-эффект для значений по умолчанию <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>.  <br /></td></tr>
+<tr class="memitem:a1acbf4d21b34011fb3c739a09ca1288d" id="r_a1acbf4d21b34011fb3c739a09ca1288d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1acbf4d21b34011fb3c739a09ca1288d">get_effect</a> (<a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> effect)</td></tr>
+<tr class="memdesc:a1acbf4d21b34011fb3c739a09ca1288d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразовывает тег в вызываемую функцию  <br /></td></tr>
+<tr class="memitem:a0a24f5aa203e96ab3e0e2bc0ccffd3f4" id="r_a0a24f5aa203e96ab3e0e2bc0ccffd3f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a24f5aa203e96ab3e0e2bc0ccffd3f4">is_persistent</a> (<a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> effect)</td></tr>
+<tr class="memdesc:a0a24f5aa203e96ab3e0e2bc0ccffd3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет тип функции: перманентная или динамическая. Нужно для того, чтобы определить как часто применять эффект (один раз или каждый удар)  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ae326c2c58102b6e49a8fdb83d365afce" id="r_ae326c2c58102b6e49a8fdb83d365afce"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a>, <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae326c2c58102b6e49a8fdb83d365afce">effect_enum_func_relation</a></td></tr>
+<tr class="memdesc:ae326c2c58102b6e49a8fdb83d365afce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вспомогательный константный словарь для быстрого поиска функции по тегу  <br /></td></tr>
+<tr class="memitem:add1e008483c13b3fab5225e5e3b5463d" id="r_add1e008483c13b3fab5225e5e3b5463d"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a>, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add1e008483c13b3fab5225e5e3b5463d">is_func_persistent</a></td></tr>
+<tr class="memdesc:add1e008483c13b3fab5225e5e3b5463d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вспомогательный константный словарь для быстрой настройки типа функций  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="aa4211a85c7d817a5992f812096f47dea" name="aa4211a85c7d817a5992f812096f47dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4211a85c7d817a5992f812096f47dea">&#9670;&#160;</a></span>agility_boost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> agility_boost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект увеличивающая ловкость на единицу каждый бой <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00091">91</a></p>
+
+</div>
+</div>
+<a id="a9915fe59e1bfd7b774c01672edc1cc68" name="a9915fe59e1bfd7b774c01672edc1cc68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9915fe59e1bfd7b774c01672edc1cc68">&#9670;&#160;</a></span>endurance_boost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> endurance_boost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект увеличивающая выносливость на единицу каждый бой <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00104">104</a></p>
+
+</div>
+</div>
+<a id="a985ba61e2d9a95af6bbb287d5322ca09" name="a985ba61e2d9a95af6bbb287d5322ca09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985ba61e2d9a95af6bbb287d5322ca09">&#9670;&#160;</a></span>fire_breathing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> fire_breathing </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект соответствующая навыку "Дыхание огнём" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00133">133</a></p>
+
+</div>
+</div>
+<a id="a1acbf4d21b34011fb3c739a09ca1288d" name="a1acbf4d21b34011fb3c739a09ca1288d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1acbf4d21b34011fb3c739a09ca1288d">&#9670;&#160;</a></span>get_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a> get_effect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a></td>          <td class="paramname"><span class="paramname"><em>effect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразовывает тег в вызываемую функцию </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>тег, из которого нужно получить функцию </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> - вызываемая функция</dd></dl>
+<dl class="section user"><dt>Example</dt><dd></dd></dl>
+<div class="fragment"><div class="line">std::vector&lt;Effects&gt; effect_list {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26">FIRE_BREATHING</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7">NO_EFFECT</a>, ENDURANCE_BOOST};</div>
+<div class="line"><a class="code hl_function" href="#a1acbf4d21b34011fb3c739a09ca1288d">get_effect</a>(effect_list[rand() % 3]);</div>
+<div class="ttc" id="a_effects_8cpp_html_a1acbf4d21b34011fb3c739a09ca1288d"><div class="ttname"><a href="#a1acbf4d21b34011fb3c739a09ca1288d">get_effect</a></div><div class="ttdeci">effect_func_type get_effect(Effects effect)</div><div class="ttdoc">Преобразовывает тег в вызываемую функцию</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00190">Effects.cpp:190</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7">NO_EFFECT</a></div><div class="ttdeci">@ NO_EFFECT</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26">FIRE_BREATHING</a></div><div class="ttdeci">@ FIRE_BREATHING</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+</div><!-- fragment --><p>Смысл создания таких сложных структур, а также этой функции хорошо отображён в <a class="el" href="_player_8cpp.html">Player.cpp</a> и <a class="el" href="_enemy_8cpp.html">Enemy.cpp</a> в функциях get_extra_specifications, где ищется соответствие в константном словаре и при помощи этой функции получается функция</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Player::get_extra_specifications(const Pawn&amp;, int)</a> </dd>
+<dd>
+<a class="el" href="class_enemy.html#a0671c071919730219d1b9934f34bce7c" title="Позволяет получить дополнительные характеристики, которые должны добавиться к текущим перед ударом....">Enemy::get_extra_specifications(const Pawn&amp;, int)</a> </dd>
+<dd>
+<a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00190">190</a></p>
+
+</div>
+</div>
+<a id="a290ea20e374e98ab48e1240bcdc9ea1b" name="a290ea20e374e98ab48e1240bcdc9ea1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290ea20e374e98ab48e1240bcdc9ea1b">&#9670;&#160;</a></span>hidden_attack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> hidden_attack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект соответствующая навыку "Скрытая атака" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00013">13</a></p>
+
+</div>
+</div>
+<a id="a0a24f5aa203e96ab3e0e2bc0ccffd3f4" name="a0a24f5aa203e96ab3e0e2bc0ccffd3f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a24f5aa203e96ab3e0e2bc0ccffd3f4">&#9670;&#160;</a></span>is_persistent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_persistent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a></td>          <td class="paramname"><span class="paramname"><em>effect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определяет тип функции: перманентная или динамическая. Нужно для того, чтобы определить как часто применять эффект (один раз или каждый удар) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>Тег, указывающий на тестируемую функцию </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Результат функции должен применяться реже </dd>
+<dd>
+false Результат применяется каждый удар</dd></dl>
+<dl class="section user"><dt>Example</dt><dd></dd></dl>
+<p>Смысл создания таких сложных структур, а также этой функции хорошо отображён в <span class="tt">./Player.cpp</span> и <a class="el" href="_enemy_8cpp.html">Enemy.cpp</a> в функциях get_extra_specifications, где ищется соответствие в константном словаре</p>
+<dl class="section see"><dt>См. также</dt><dd><a class="el" href="class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Player::get_extra_specifications(const Pawn&amp;, int)</a> </dd>
+<dd>
+<a class="el" href="class_enemy.html#a0671c071919730219d1b9934f34bce7c" title="Позволяет получить дополнительные характеристики, которые должны добавиться к текущим перед ударом....">Enemy::get_extra_specifications(const Pawn&amp;, int)</a> </dd>
+<dd>
+<a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00224">224</a></p>
+
+</div>
+</div>
+<a id="af011c5b65e4463553d5f0acccce40658" name="af011c5b65e4463553d5f0acccce40658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af011c5b65e4463553d5f0acccce40658">&#9670;&#160;</a></span>no_effect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> no_effect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Пустая функция-эффект для значений по умолчанию <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications(0, 0, 0)</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00153">153</a></p>
+
+</div>
+</div>
+<a id="a93dedcbc57e910d481ded59bdd6c449e" name="a93dedcbc57e910d481ded59bdd6c449e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93dedcbc57e910d481ded59bdd6c449e">&#9670;&#160;</a></span>poison()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> poison </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект соответствующая способности "яд" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00116">116</a></p>
+
+</div>
+</div>
+<a id="a9c64b821152199c7aaa1a5be8acedf12" name="a9c64b821152199c7aaa1a5be8acedf12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c64b821152199c7aaa1a5be8acedf12">&#9670;&#160;</a></span>rage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> rage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект соответствующая навыку "Ярость" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00053">53</a></p>
+
+</div>
+</div>
+<a id="acaad77a2cd7ebec3cbdf04c26407d661" name="acaad77a2cd7ebec3cbdf04c26407d661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaad77a2cd7ebec3cbdf04c26407d661">&#9670;&#160;</a></span>rush_to_action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> rush_to_action </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект соответствующая навыку "Порыв к действию" <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00033">33</a></p>
+
+</div>
+</div>
+<a id="a0d3a803419690b71736f266b7f83c373" name="a0d3a803419690b71736f266b7f83c373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3a803419690b71736f266b7f83c373">&#9670;&#160;</a></span>strength_boost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpawn__specifications.html">pawn_specifications</a> strength_boost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_pawn.html">Pawn</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></td>          <td class="paramname"><span class="paramname"><em>external_printer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-эффект увеличивающая силу на единицу каждый бой <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*</td><td>Описаны в <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389" title="Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов">effect_func_type</a> как общие для группы функций</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Изменения в характеристиках, но не сами характеристики! </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00078">78</a></p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="ae326c2c58102b6e49a8fdb83d365afce" name="ae326c2c58102b6e49a8fdb83d365afce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae326c2c58102b6e49a8fdb83d365afce">&#9670;&#160;</a></span>effect_enum_func_relation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt;<a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a>, <a class="el" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a>&gt; effect_enum_func_relation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e">HIDDEN_ATTACK</a>, <a class="code hl_function" href="#a290ea20e374e98ab48e1240bcdc9ea1b">hidden_attack</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9">RUSH_TO_ACTION</a>, <a class="code hl_function" href="#acaad77a2cd7ebec3cbdf04c26407d661">rush_to_action</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4">RAGE</a>, <a class="code hl_function" href="#a9c64b821152199c7aaa1a5be8acedf12">rage</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e">STRENGTH_BOOST</a>, <a class="code hl_function" href="#a0d3a803419690b71736f266b7f83c373">strength_boost</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5">AGILITY_BOOST</a>, <a class="code hl_function" href="#aa4211a85c7d817a5992f812096f47dea">agility_boost</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f">ENDURANCE_BOOTS</a>, <a class="code hl_function" href="#a9915fe59e1bfd7b774c01672edc1cc68">endurance_boost</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01">POISON</a>, <a class="code hl_function" href="#a93dedcbc57e910d481ded59bdd6c449e">poison</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26">FIRE_BREATHING</a>, <a class="code hl_function" href="#a985ba61e2d9a95af6bbb287d5322ca09">fire_breathing</a>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7">NO_EFFECT</a>, <a class="code hl_function" href="#af011c5b65e4463553d5f0acccce40658">no_effect</a>}</div>
+<div class="line">}</div>
+<div class="ttc" id="a_effects_8cpp_html_a0d3a803419690b71736f266b7f83c373"><div class="ttname"><a href="#a0d3a803419690b71736f266b7f83c373">strength_boost</a></div><div class="ttdeci">pawn_specifications strength_boost(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект увеличивающая силу на единицу каждый бой effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00078">Effects.cpp:78</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_a290ea20e374e98ab48e1240bcdc9ea1b"><div class="ttname"><a href="#a290ea20e374e98ab48e1240bcdc9ea1b">hidden_attack</a></div><div class="ttdeci">pawn_specifications hidden_attack(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Скрытая атака&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00013">Effects.cpp:13</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_a93dedcbc57e910d481ded59bdd6c449e"><div class="ttname"><a href="#a93dedcbc57e910d481ded59bdd6c449e">poison</a></div><div class="ttdeci">pawn_specifications poison(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая способности &quot;яд&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00116">Effects.cpp:116</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_a985ba61e2d9a95af6bbb287d5322ca09"><div class="ttname"><a href="#a985ba61e2d9a95af6bbb287d5322ca09">fire_breathing</a></div><div class="ttdeci">pawn_specifications fire_breathing(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Дыхание огнём&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00133">Effects.cpp:133</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_a9915fe59e1bfd7b774c01672edc1cc68"><div class="ttname"><a href="#a9915fe59e1bfd7b774c01672edc1cc68">endurance_boost</a></div><div class="ttdeci">pawn_specifications endurance_boost(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект увеличивающая выносливость на единицу каждый бой effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00104">Effects.cpp:104</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_a9c64b821152199c7aaa1a5be8acedf12"><div class="ttname"><a href="#a9c64b821152199c7aaa1a5be8acedf12">rage</a></div><div class="ttdeci">pawn_specifications rage(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Ярость&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00053">Effects.cpp:53</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_aa4211a85c7d817a5992f812096f47dea"><div class="ttname"><a href="#aa4211a85c7d817a5992f812096f47dea">agility_boost</a></div><div class="ttdeci">pawn_specifications agility_boost(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект увеличивающая ловкость на единицу каждый бой effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00091">Effects.cpp:91</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_acaad77a2cd7ebec3cbdf04c26407d661"><div class="ttname"><a href="#acaad77a2cd7ebec3cbdf04c26407d661">rush_to_action</a></div><div class="ttdeci">pawn_specifications rush_to_action(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Порыв к действию&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00033">Effects.cpp:33</a></div></div>
+<div class="ttc" id="a_effects_8cpp_html_af011c5b65e4463553d5f0acccce40658"><div class="ttname"><a href="#af011c5b65e4463553d5f0acccce40658">no_effect</a></div><div class="ttdeci">pawn_specifications no_effect(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Пустая функция-эффект для значений по умолчанию effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00153">Effects.cpp:153</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f">ENDURANCE_BOOTS</a></div><div class="ttdeci">@ ENDURANCE_BOOTS</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e">HIDDEN_ATTACK</a></div><div class="ttdeci">@ HIDDEN_ATTACK</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4">RAGE</a></div><div class="ttdeci">@ RAGE</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9">RUSH_TO_ACTION</a></div><div class="ttdeci">@ RUSH_TO_ACTION</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01">POISON</a></div><div class="ttdeci">@ POISON</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e">STRENGTH_BOOST</a></div><div class="ttdeci">@ STRENGTH_BOOST</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5">AGILITY_BOOST</a></div><div class="ttdeci">@ AGILITY_BOOST</div><div class="ttdef"><b>Определения</b> <a href="_effects_8h_source.html#l00045">Effects.h:45</a></div></div>
+</div><!-- fragment -->
+<p>Вспомогательный константный словарь для быстрого поиска функции по тегу </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00158">158</a></p>
+
+</div>
+</div>
+<a id="add1e008483c13b3fab5225e5e3b5463d" name="add1e008483c13b3fab5225e5e3b5463d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1e008483c13b3fab5225e5e3b5463d">&#9670;&#160;</a></span>is_func_persistent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const map&lt;<a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a>, bool&gt; is_func_persistent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e">HIDDEN_ATTACK</a>, <span class="keyword">false</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9">RUSH_TO_ACTION</a>, <span class="keyword">false</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4">RAGE</a>, <span class="keyword">false</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e">STRENGTH_BOOST</a>, <span class="keyword">true</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5">AGILITY_BOOST</a>, <span class="keyword">true</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f">ENDURANCE_BOOTS</a>, <span class="keyword">true</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01">POISON</a>, <span class="keyword">false</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26">FIRE_BREATHING</a>, <span class="keyword">false</span>},</div>
+<div class="line">    {<a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7">NO_EFFECT</a>, <span class="keyword">true</span>}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Вспомогательный константный словарь для быстрой настройки типа функций </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_effects_8cpp_source.html">Effects.cpp</a> строка <a class="el" href="_effects_8cpp_source.html#l00195">195</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li><li class="navelem"><a href="_effects_8cpp.html">Effects.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

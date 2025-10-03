@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Файл src/data/EnemyData.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_enemy_data_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл EnemyData.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Начальные данные, которые вполне не сложно вынести в json. Могут возникнуть трудности только с добавлением своих новых эффектов и врагов (т. к. там меняется вся логика в их поведени)  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_pawn_8h_source.html">../characters/Pawn.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_enemy_8h_source.html">../characters/Enemy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_effects_8h_source.html">Effects.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_post_effects_8h_source.html">PostEffects.h</a>&quot;</code><br />
+</div>
+<p><a href="_enemy_data_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:Enemies" id="r_Enemies"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html">Enemies</a></td></tr>
+<tr class="memdesc:namespace_enemies"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пространство имён для определения данных о предопределённых врагах. Все соотношения тут можно настраивать под нужды гейм-дизайнера <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad46f9e49bb5dd4efa1a55f3c7f0bce5b" id="r_ad46f9e49bb5dd4efa1a55f3c7f0bce5b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#ad46f9e49bb5dd4efa1a55f3c7f0bce5b">Enemies::TYPES_VALUES</a> [] = { <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ada9eb61a26991d3b6ba48144700fe90e8c">GOBLIN</a>, <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ada284a62cb25d831ea34235e438146b7dc">SKELETON</a>, <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1adacb0a320fee032f020bf15663cb096e5f">SLIME</a>, <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ada9a0fc5030d84ad0ed3497f330b8520eb">GHOST</a>, <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ada656d59f604a47708aac2b0a52a434f5d">GOLEM</a>, <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1adaeeb0b4e8c8e158c7c357cdf79e68d5f9">DRAGON</a> }</td></tr>
+<tr class="memdesc:ad46f9e49bb5dd4efa1a55f3c7f0bce5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив типов врагов для итерирования по ним  <br /></td></tr>
+<tr class="memitem:a402496a008dcbf150003e0730354c0b4" id="r_a402496a008dcbf150003e0730354c0b4"><td class="memItemLeft" align="right" valign="top">const short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#a402496a008dcbf150003e0730354c0b4">Enemies::TYPES_AMOUNT</a> = 6</td></tr>
+<tr class="memdesc:a402496a008dcbf150003e0730354c0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество типов врагов  <br /></td></tr>
+<tr class="memitem:a88b9dc17bdcaa8bd08de2aad3672f6f1" id="r_a88b9dc17bdcaa8bd08de2aad3672f6f1"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#a88b9dc17bdcaa8bd08de2aad3672f6f1">Enemies::VISIBLE_NAMES</a></td></tr>
+<tr class="memdesc:a88b9dc17bdcaa8bd08de2aad3672f6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов с их строковыми именами  <br /></td></tr>
+<tr class="memitem:a339661a85e92743e1e4f955590135d65" id="r_a339661a85e92743e1e4f955590135d65"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, <a class="el" href="structpawn__specifications.html">pawn_specifications</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#a339661a85e92743e1e4f955590135d65">Enemies::SPECIFICATIONS</a></td></tr>
+<tr class="memdesc:a339661a85e92743e1e4f955590135d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов врагов с их начальными характеристиками  <br /></td></tr>
+<tr class="memitem:af5cf53ac8c0f339a2bf7e2fd4b6fdb8d" id="r_af5cf53ac8c0f339a2bf7e2fd4b6fdb8d"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#af5cf53ac8c0f339a2bf7e2fd4b6fdb8d">Enemies::INITIAL_HEALTHES</a></td></tr>
+<tr class="memdesc:af5cf53ac8c0f339a2bf7e2fd4b6fdb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов врагов с их начальными значениями здоровья  <br /></td></tr>
+<tr class="memitem:aadc5bf19d2dd2a2ca479d8a273ac3f6e" id="r_aadc5bf19d2dd2a2ca479d8a273ac3f6e"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, <a class="el" href="struct_weapon.html">Weapon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#aadc5bf19d2dd2a2ca479d8a273ac3f6e">Enemies::REWARDS</a></td></tr>
+<tr class="memdesc:aadc5bf19d2dd2a2ca479d8a273ac3f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов врагов с наградами после их уничтожения  <br /></td></tr>
+<tr class="memitem:ad10e596111faad5304e420800ca344ba" id="r_ad10e596111faad5304e420800ca344ba"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#ad10e596111faad5304e420800ca344ba">Enemies::WEAPON_DAMAGE</a></td></tr>
+<tr class="memdesc:ad10e596111faad5304e420800ca344ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов врагов с их фактическими значениями урона от оружия, не зависимо от самого оружия  <br /></td></tr>
+<tr class="memitem:a8503fc69730637af150406f2067ae3b0" id="r_a8503fc69730637af150406f2067ae3b0"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, <a class="el" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#a8503fc69730637af150406f2067ae3b0">Enemies::EFFECT_RELATION</a></td></tr>
+<tr class="memdesc:a8503fc69730637af150406f2067ae3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов с эффектами, которые по сути будут способностями перед ударом  <br /></td></tr>
+<tr class="memitem:a18f6f0456e11c845545e8a282f057e4c" id="r_a18f6f0456e11c845545e8a282f057e4c"><td class="memItemLeft" align="right" valign="top">const map&lt; <a class="el" href="namespace_enemies.html#a5b5024c6efa7e15366bfc6eaafb4b1ad">Types</a>, <a class="el" href="_post_effects_8h.html#a64244006d21d14939648fd48c722a61a">PostEffects</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_enemies.html#a18f6f0456e11c845545e8a282f057e4c">Enemies::POSTEFFECT_RELATION</a></td></tr>
+<tr class="memdesc:a18f6f0456e11c845545e8a282f057e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соотношение тегов с постэффектами, которые по сути будут способностями при ударах  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Начальные данные, которые вполне не сложно вынести в json. Могут возникнуть трудности только с добавлением своих новых эффектов и врагов (т. к. там меняется вся логика в их поведени) </p>
+<dl class="section author"><dt>Автор</dt><dd>Vlad Korzun (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'d.'+'kor'+'zu'+'n.m'+'in'+'sk@'+'gm'+'ail'+'.c'+'om'; return false;">vlad.<span class="obfuscator">.nosp@m.</span>korz<span class="obfuscator">.nosp@m.</span>un.mi<span class="obfuscator">.nosp@m.</span>nsk@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<p>Описывает в пространстве имён <a class="el" href="namespace_enemies.html" title="Пространство имён для определения данных о предопределённых врагах. Все соотношения тут можно настраи...">Enemies</a></p>
+<dl class="section date"><dt>Дата</dt><dd>2025-10-01 </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_enemy_data_8h_source.html">EnemyData.h</a></p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li><li class="navelem"><a href="_enemy_data_8h.html">EnemyData.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

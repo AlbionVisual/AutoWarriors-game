@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Auto Warriors Game: Исходный файл src/data/Effects.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Auto Warriors Game
+   </div>
+   <div id="projectbrief">A turn-based strategy game written in C++.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_effects_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Effects.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_effects_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef EFFECTS_ONCE</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define EFFECTS_ONCE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_pawn_8h.html">../characters/Pawn.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">   42</a></span><span class="keyword">using </span><a class="code hl_typedef" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a> = std::function&lt;<a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp;, <span class="keywordtype">int</span>, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a>)&gt;;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5">   45</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> { <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e">HIDDEN_ATTACK</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9">RUSH_TO_ACTION</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4">RAGE</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e">STRENGTH_BOOST</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5">AGILITY_BOOST</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f">ENDURANCE_BOOTS</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01">POISON</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26">FIRE_BREATHING</a>, <a class="code hl_enumvalue" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7">NO_EFFECT</a> };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#a290ea20e374e98ab48e1240bcdc9ea1b">hidden_attack</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#acaad77a2cd7ebec3cbdf04c26407d661">rush_to_action</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#a9c64b821152199c7aaa1a5be8acedf12">rage</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#a0d3a803419690b71736f266b7f83c373">strength_boost</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#aa4211a85c7d817a5992f812096f47dea">agility_boost</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#a9915fe59e1bfd7b774c01672edc1cc68">endurance_boost</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#a93dedcbc57e910d481ded59bdd6c449e">poison</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#a985ba61e2d9a95af6bbb287d5322ca09">fire_breathing</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><a class="code hl_struct" href="structpawn__specifications.html">pawn_specifications</a> <a class="code hl_function" href="_effects_8h.html#af011c5b65e4463553d5f0acccce40658">no_effect</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; self, <span class="keyword">const</span> <a class="code hl_class" href="class_pawn.html">Pawn</a>&amp; target, <span class="keywordtype">int</span> move_number, <a class="code hl_typedef" href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a> external_printer);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><a class="code hl_typedef" href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a> <a class="code hl_function" href="_effects_8h.html#a1acbf4d21b34011fb3c739a09ca1288d">get_effect</a>(<a class="code hl_enumeration" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> effect);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_effects_8h.html#a0a24f5aa203e96ab3e0e2bc0ccffd3f4">is_persistent</a>(<a class="code hl_enumeration" href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a> effect);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">// EFFECTS_ONCE</span></div>
+<div class="ttc" id="a_effects_8h_html_a0a24f5aa203e96ab3e0e2bc0ccffd3f4"><div class="ttname"><a href="_effects_8h.html#a0a24f5aa203e96ab3e0e2bc0ccffd3f4">is_persistent</a></div><div class="ttdeci">bool is_persistent(Effects effect)</div><div class="ttdoc">Определяет тип функции: перманентная или динамическая. Нужно для того, чтобы определить как часто при...</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00224">Effects.cpp:224</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a0d3a803419690b71736f266b7f83c373"><div class="ttname"><a href="_effects_8h.html#a0d3a803419690b71736f266b7f83c373">strength_boost</a></div><div class="ttdeci">pawn_specifications strength_boost(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект увеличивающая силу на единицу каждый бой effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00078">Effects.cpp:78</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a1acbf4d21b34011fb3c739a09ca1288d"><div class="ttname"><a href="_effects_8h.html#a1acbf4d21b34011fb3c739a09ca1288d">get_effect</a></div><div class="ttdeci">effect_func_type get_effect(Effects effect)</div><div class="ttdoc">Преобразовывает тег в вызываемую функцию</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00190">Effects.cpp:190</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a290ea20e374e98ab48e1240bcdc9ea1b"><div class="ttname"><a href="_effects_8h.html#a290ea20e374e98ab48e1240bcdc9ea1b">hidden_attack</a></div><div class="ttdeci">pawn_specifications hidden_attack(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Скрытая атака&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00013">Effects.cpp:13</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576">Effects</a></div><div class="ttdeci">Effects</div><div class="ttdoc">Теги для функций, в том числе NO_EFFECT</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a0bf7c7687c61e7c0c7fe4972816e1d8f">ENDURANCE_BOOTS</a></div><div class="ttdeci">@ ENDURANCE_BOOTS</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a191cd9d4996ac6384d55d40123bab19e">HIDDEN_ATTACK</a></div><div class="ttdeci">@ HIDDEN_ATTACK</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a491e3cdca5122155c6a37a2eb283dcd4">RAGE</a></div><div class="ttdeci">@ RAGE</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a548126d587d43d3630c45cd091e095f7">NO_EFFECT</a></div><div class="ttdeci">@ NO_EFFECT</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576a6525a479fce104b916740acfe668d8a9">RUSH_TO_ACTION</a></div><div class="ttdeci">@ RUSH_TO_ACTION</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aa7a02b21c15585afc1c0942610537f26">FIRE_BREATHING</a></div><div class="ttdeci">@ FIRE_BREATHING</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576aafa82716ce8ad7247f07e61a5d88ba01">POISON</a></div><div class="ttdeci">@ POISON</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ab131b58278c167e8b71223ac1d94518e">STRENGTH_BOOST</a></div><div class="ttdeci">@ STRENGTH_BOOST</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5"><div class="ttname"><a href="_effects_8h.html#a3259c9d49f9ebe9ec579412f1841b576ada5b21be2d7044373ccdd0effb9af9b5">AGILITY_BOOST</a></div><div class="ttdeci">@ AGILITY_BOOST</div><div class="ttdef"><b>Определения</b> <a href="#l00045">Effects.h:45</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a93dedcbc57e910d481ded59bdd6c449e"><div class="ttname"><a href="_effects_8h.html#a93dedcbc57e910d481ded59bdd6c449e">poison</a></div><div class="ttdeci">pawn_specifications poison(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая способности &quot;яд&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00116">Effects.cpp:116</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a985ba61e2d9a95af6bbb287d5322ca09"><div class="ttname"><a href="_effects_8h.html#a985ba61e2d9a95af6bbb287d5322ca09">fire_breathing</a></div><div class="ttdeci">pawn_specifications fire_breathing(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Дыхание огнём&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00133">Effects.cpp:133</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a9915fe59e1bfd7b774c01672edc1cc68"><div class="ttname"><a href="_effects_8h.html#a9915fe59e1bfd7b774c01672edc1cc68">endurance_boost</a></div><div class="ttdeci">pawn_specifications endurance_boost(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект увеличивающая выносливость на единицу каждый бой effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00104">Effects.cpp:104</a></div></div>
+<div class="ttc" id="a_effects_8h_html_a9c64b821152199c7aaa1a5be8acedf12"><div class="ttname"><a href="_effects_8h.html#a9c64b821152199c7aaa1a5be8acedf12">rage</a></div><div class="ttdeci">pawn_specifications rage(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Ярость&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00053">Effects.cpp:53</a></div></div>
+<div class="ttc" id="a_effects_8h_html_aa4211a85c7d817a5992f812096f47dea"><div class="ttname"><a href="_effects_8h.html#aa4211a85c7d817a5992f812096f47dea">agility_boost</a></div><div class="ttdeci">pawn_specifications agility_boost(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект увеличивающая ловкость на единицу каждый бой effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00091">Effects.cpp:91</a></div></div>
+<div class="ttc" id="a_effects_8h_html_aca1296a2a2ec50f994d470b02e967389"><div class="ttname"><a href="_effects_8h.html#aca1296a2a2ec50f994d470b02e967389">effect_func_type</a></div><div class="ttdeci">std::function&lt; pawn_specifications(const Pawn &amp;, const Pawn &amp;, int, printer_type)&gt; effect_func_type</div><div class="ttdoc">Тип-функция для сохранения ссылки на какую-то из определённых функций-эффектов</div><div class="ttdef"><b>Определения</b> <a href="#l00042">Effects.h:42</a></div></div>
+<div class="ttc" id="a_effects_8h_html_acaad77a2cd7ebec3cbdf04c26407d661"><div class="ttname"><a href="_effects_8h.html#acaad77a2cd7ebec3cbdf04c26407d661">rush_to_action</a></div><div class="ttdeci">pawn_specifications rush_to_action(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Функция-эффект соответствующая навыку &quot;Порыв к действию&quot; effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00033">Effects.cpp:33</a></div></div>
+<div class="ttc" id="a_effects_8h_html_af011c5b65e4463553d5f0acccce40658"><div class="ttname"><a href="_effects_8h.html#af011c5b65e4463553d5f0acccce40658">no_effect</a></div><div class="ttdeci">pawn_specifications no_effect(const Pawn &amp;self, const Pawn &amp;target, int move_number, printer_type external_printer)</div><div class="ttdoc">Пустая функция-эффект для значений по умолчанию effect_func_type.</div><div class="ttdef"><b>Определения</b> <a href="_effects_8cpp_source.html#l00153">Effects.cpp:153</a></div></div>
+<div class="ttc" id="a_pawn_8h_html"><div class="ttname"><a href="_pawn_8h.html">Pawn.h</a></div><div class="ttdoc">Здесь описывается абстрактный класс любого персонажа в игре, тип-функции стороннего вывода текста и с...</div></div>
+<div class="ttc" id="a_pawn_8h_html_a484bb4edf6d3832d733930e174cd279c"><div class="ttname"><a href="_pawn_8h.html#a484bb4edf6d3832d733930e174cd279c">printer_type</a></div><div class="ttdeci">std::function&lt; void(std::string, int, ConsoleColor)&gt; printer_type</div><div class="ttdoc">Тип функции вывода сообщения на экран, для сохранения в качестве статичного поля и последующего испол...</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00024">Pawn.h:24</a></div></div>
+<div class="ttc" id="aclass_pawn_html"><div class="ttname"><a href="class_pawn.html">Pawn</a></div><div class="ttdoc">Абстрактный класс любого персонажа в игре, будь то игрок или враг.</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00055">Pawn.h:55</a></div></div>
+<div class="ttc" id="astructpawn__specifications_html"><div class="ttname"><a href="structpawn__specifications.html">pawn_specifications</a></div><div class="ttdoc">Структура для хранения и передачи статичных значений характеристик персонажей</div><div class="ttdef"><b>Определения</b> <a href="_pawn_8h_source.html#l00036">Pawn.h:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li><li class="navelem"><a href="_effects_8h.html">Effects.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
