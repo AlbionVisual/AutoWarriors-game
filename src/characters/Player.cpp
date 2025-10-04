@@ -16,6 +16,7 @@ using std::string;
  *
  * @param target На кого идёт удар этим персонажем
  * @param move_number Номер хода
+ * @param is_attacking Прошла ли атака (от этого зависит будет ли выводится информация)
  * @return pawn_specifications - Характеристики, которые нужно добавить перед ударом
  *
  * #### Example:
@@ -26,7 +27,7 @@ using std::string;
  * аналог в Enemy::get_extra_specifications(const Pawn&, int)
  *
  */
-pawn_specifications Player::get_extra_specifications(const Pawn& target, int move_number) {
+pawn_specifications Player::get_extra_specifications(const Pawn& target, int move_number, bool is_attacking) {
     pawn_specifications extra_specifications = pawn_specifications(0, 0, 0);
 
     for (auto& pl_class : TYPES_VALUES) {
@@ -45,7 +46,7 @@ pawn_specifications Player::get_extra_specifications(const Pawn& target, int mov
             }
             else {
                 // иначе оставить информацию во временной структуре
-                extra_specifications = extra_specifications + get_effect(effect)(*this, target, move_number, external_printer);
+                extra_specifications = extra_specifications + get_effect(effect)(*this, target, move_number, is_attacking ? external_printer : nullptr);
             }
         }
     }

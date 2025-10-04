@@ -13,6 +13,7 @@ using namespace Enemies;
  *
  * @param target цель, на которую действует персонаж
  * @param move_number номер хода, для передачи в функции-эффекты
+ * @param is_attacking Прошла ли атака (от этого зависит будет ли выводится информация)
  * @return pawn_specifications - Характеристики персонажа, которые нужно добавить к текущим
  *         перед ударом
  *
@@ -22,7 +23,7 @@ using namespace Enemies;
  * для игрока Player::get_extra_specifications()
  *
  */
-pawn_specifications Enemy::get_extra_specifications(const Pawn& target, int move_number) {
+pawn_specifications Enemy::get_extra_specifications(const Pawn& target, int move_number, bool is_attacking) {
     pawn_specifications extra_specifications = pawn_specifications(0, 0, 0);
     const Effects& effect = EFFECT_RELATION.at(enemy_class);
     // Если функция persistent
@@ -35,7 +36,7 @@ pawn_specifications Enemy::get_extra_specifications(const Pawn& target, int move
     }
     else {
         // иначе оставить информацию во врЕменной структуре
-        extra_specifications = extra_specifications + get_effect(effect)(*this, target, move_number, external_printer);
+        extra_specifications = extra_specifications + get_effect(effect)(*this, target, move_number, is_attacking ? external_printer : nullptr);
     }
     return extra_specifications;
 };

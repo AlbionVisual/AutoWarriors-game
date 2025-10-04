@@ -41,7 +41,7 @@ class Enemy : public Pawn {
 public:
     Enemy();
 
-    pawn_specifications get_extra_specifications(const Pawn& target, int move_number) override;
+    pawn_specifications get_extra_specifications(const Pawn& target, int move_number, bool is_attacking) override;
     void apply_damage(const Pawn& damager, int extra_damage, int move_number) override;
 
     string get_visible_name();

@@ -80,6 +80,7 @@ public:
      *
      * @param target На кого идёт удар этим персонажем
      * @param move_number Номер хода
+     * @param is_attacking Прошла ли атака
      * @return pawn_specifications - Характеристики, которые нужно добавить перед ударом
      *
      * #### Example:
@@ -89,7 +90,7 @@ public:
      * Также переписывается в Player::get_extra_specifications(const Pawn&, int)
      * и Enemy::get_extra_specifications(const Pawn&, int)
      */
-    virtual pawn_specifications get_extra_specifications(const Pawn& target, int move_number) = 0;
+    virtual pawn_specifications get_extra_specifications(const Pawn& target, int move_number, bool is_attacking) = 0;
     void attacked_by(Pawn& attacker, int move_number);
     virtual void apply_damage(const Pawn& damager, int extra_damage, int move_number);
     int get_health();

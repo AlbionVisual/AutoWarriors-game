@@ -77,8 +77,9 @@ pawn_specifications pawn_specifications::operator+(const pawn_specifications& ot
 void Pawn::attacked_by(Pawn& attacker, int move_number) {
     pawn_specifications& shield = this->specifications;
     int chance = rand() % (attacker.specifications.agility + shield.agility) + 1;
-    pawn_specifications extra_specifications = attacker.get_extra_specifications(*this, move_number); // Применение всех эффектов у атакующего
-    if (chance > shield.agility) { // Если атакующий не промахнулся
+    bool is_attacking = chance > shield.agility;
+    pawn_specifications extra_specifications = attacker.get_extra_specifications(*this, move_number, is_attacking); // Применение всех эффектов у атакующего
+    if (is_attacking) { // Если атакующий не промахнулся
         apply_damage(attacker, extra_specifications.strength, move_number); // Применение всех эффектов на урон у цели
     }
     else { // Иначе вывести сообщение о том, что атака промахнулась и завершить тем самым ход

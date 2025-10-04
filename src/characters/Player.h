@@ -40,7 +40,7 @@ public:
     Player();
     Player(Players::PlayerTypes pl_class);
     std::string get_visible_name();
-    pawn_specifications get_extra_specifications(const Pawn& target, int move_number) override;
+    pawn_specifications get_extra_specifications(const Pawn& target, int move_number, bool is_attacking) override;
     void apply_damage(const Pawn& damager, int extra_damage, int move_number) override;
     void reset_player();
     void add_level(Players::PlayerTypes new_pl_class);
