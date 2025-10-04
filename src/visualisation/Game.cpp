@@ -3,6 +3,8 @@
 #include <iostream>
 
 using std::cout;
+using std::string;
+using std::to_string;
 
 /**
  * @brief Создание новой игры. Вызывается функция инициализатор Game::init()
@@ -85,6 +87,7 @@ void Game::start() {
     }
 
     // Вывод сообщения (победил / проиграл)
+    cout << "\n\n";
     if (code == 1) {
         colorize_text(RED_WHITE);
         cout << "\tYou lost\t";
@@ -95,6 +98,7 @@ void Game::start() {
         cout << "\tYou won!\t";
         colorize_text();
     }
+    cout << "\n\n";
 }
 
 
@@ -134,8 +138,15 @@ int Game::play_round(bool is_last) {
     if (!is_last) {
         cout << "Choose a weapon:\n";
         Weapon reward = enemy_list[enemies_amount - 1].get_reward();
-        cout << player.active_weapon.weapon_name << ", damage: " << player.active_weapon.damage << "\t\t\t--- (your current, type anything except \"1\" to choose it)\n";
-        cout << reward.weapon_name << ", damage: " << reward.damage << "\t\t\t--- (type \"1\")\n";
+        string weapon1 = player.active_weapon.weapon_name + ", damage: " + to_string(player.active_weapon.damage);
+        int amount_of_tabs = 3 - int(weapon1.length() / 8);
+        while (amount_of_tabs-- > 0) weapon1 += '\t';
+        cout << weapon1 << "type \"0\" (current)\n";
+        string weapon2 = reward.weapon_name + ", damage: " + to_string(reward.damage);
+        amount_of_tabs = 4 - int(weapon2.length() / 8);
+        while (amount_of_tabs-- > 0) weapon2 += '\t';
+        cout << weapon2 << "type \"1\"\n";
+
         int ans;
         cin >> ans;
         if (ans == 1) {
