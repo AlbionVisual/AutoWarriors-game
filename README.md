@@ -2,9 +2,7 @@
 
 Тестовое задание в Леста Академию. Выполнялось **неделю**. Игра - консольное приложение на C++. Весь [код документирован](https://albionvisual.github.io/AutoWarriors-game/) при помощи Doxygen. Реализация имеет особенность: почти все данные отделены от логики игры, что позволяет геймдизайнеру легко изменять поведение персонажей изменением настроек (констант в коде).
 
-<video muted autoplay style="pointer-events: none;">
-  <source src="social/AutoWarriorsGameDownload.mp4" type="video/mp4">
-</video>
+https://github.com/user-attachments/assets/f43fd243-f2c7-4553-9da5-01789f1373fd
 
 Подробнее описано [ниже](#auto-warriors-game-1).
 
@@ -40,3 +38,5 @@ C++
 ```
 
 ## Auto Warriors Game
+
+
