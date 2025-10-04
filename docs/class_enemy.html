@@ -111,8 +111,8 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
 Открытые члены</h2></td></tr>
 <tr class="memitem:a94f30d348b6d2840fd71675472ba38dd" id="r_a94f30d348b6d2840fd71675472ba38dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94f30d348b6d2840fd71675472ba38dd">Enemy</a> ()</td></tr>
 <tr class="memdesc:a94f30d348b6d2840fd71675472ba38dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового экземпляра класса <a class="el" href="class_enemy.html" title="Класс доопределяющий поведение врагов">Enemy</a> со случайным типом. Сразу устанавливаются параметры при помощи метода <a class="el" href="#a3fe027293064abbfe6f20f3d74755bd1" title="Устанавливает значения для полей (характеристики, начальное здоровье, награда, а также &quot;активное оруж...">Enemy::set_defaults()</a>  <br /></td></tr>
-<tr class="memitem:a0671c071919730219d1b9934f34bce7c" id="r_a0671c071919730219d1b9934f34bce7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0671c071919730219d1b9934f34bce7c">get_extra_specifications</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number) override</td></tr>
-<tr class="memdesc:a0671c071919730219d1b9934f34bce7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Позволяет получить дополнительные характеристики, которые должны добавиться к текущим перед ударом. Учитывает все эффекты, которые накладываются на врага перед ударом (настраиваются в константе <a class="el" href="namespace_enemies.html#a8503fc69730637af150406f2067ae3b0" title="Соотношение тегов с эффектами, которые по сути будут способностями перед ударом">Enemies::EFFECT_RELATION</a>) c учётом их частоты вызывания.  <br /></td></tr>
+<tr class="memitem:a48b7a4b61104b315807e0dc63c07895f" id="r_a48b7a4b61104b315807e0dc63c07895f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48b7a4b61104b315807e0dc63c07895f">get_extra_specifications</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, bool is_attacking) override</td></tr>
+<tr class="memdesc:a48b7a4b61104b315807e0dc63c07895f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Позволяет получить дополнительные характеристики, которые должны добавиться к текущим перед ударом. Учитывает все эффекты, которые накладываются на врага перед ударом (настраиваются в константе <a class="el" href="namespace_enemies.html#a8503fc69730637af150406f2067ae3b0" title="Соотношение тегов с эффектами, которые по сути будут способностями перед ударом">Enemies::EFFECT_RELATION</a>) c учётом их частоты вызывания.  <br /></td></tr>
 <tr class="memitem:a7ea7b76d5f33365a81a294f6ca908af6" id="r_a7ea7b76d5f33365a81a294f6ca908af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ea7b76d5f33365a81a294f6ca908af6">apply_damage</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;damager, int extra_damage, int move_number) override</td></tr>
 <tr class="memdesc:a7ea7b76d5f33365a81a294f6ca908af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Применение урона нанесённого другим персонажем с учётом собственных постэффектов определённых в константе <a class="el" href="namespace_enemies.html#a18f6f0456e11c845545e8a282f057e4c" title="Соотношение тегов с постэффектами, которые по сути будут способностями при ударах">Enemies::POSTEFFECT_RELATION</a>.  <br /></td></tr>
 <tr class="memitem:a1156f2b964e17b18fec60656d6eedbda" id="r_a1156f2b964e17b18fec60656d6eedbda"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1156f2b964e17b18fec60656d6eedbda">get_visible_name</a> ()</td></tr>
@@ -180,9 +180,9 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><a class="code hl_function" href="#a94f30d348b6d2840fd71675472ba38dd">Enemy</a> enemy1 = <a class="code hl_function" href="#a94f30d348b6d2840fd71675472ba38dd">Enemy</a>();</div>
 <div class="line">std::cout &lt;&lt; enemy.get_visible_name();</div>
-<div class="ttc" id="aclass_enemy_html_a94f30d348b6d2840fd71675472ba38dd"><div class="ttname"><a href="#a94f30d348b6d2840fd71675472ba38dd">Enemy::Enemy</a></div><div class="ttdeci">Enemy()</div><div class="ttdoc">Создание нового экземпляра класса Enemy со случайным типом. Сразу устанавливаются параметры при помощ...</div><div class="ttdef"><b>Определения</b> <a href="_enemy_8cpp_source.html#l00088">Enemy.cpp:88</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a94f30d348b6d2840fd71675472ba38dd"><div class="ttname"><a href="#a94f30d348b6d2840fd71675472ba38dd">Enemy::Enemy</a></div><div class="ttdeci">Enemy()</div><div class="ttdoc">Создание нового экземпляра класса Enemy со случайным типом. Сразу устанавливаются параметры при помощ...</div><div class="ttdef"><b>Определения</b> <a href="_enemy_8cpp_source.html#l00089">Enemy.cpp:89</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00088">88</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00089">89</a></p>
 
 </div>
 </div>
@@ -233,12 +233,12 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
 
 <p>Переопределяет метод предка <a class="el" href="class_pawn.html#a88f1b7c5c02ce8043279dd3d86b76987">Pawn</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00056">56</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00057">57</a></p>
 
 </div>
 </div>
-<a id="a0671c071919730219d1b9934f34bce7c" name="a0671c071919730219d1b9934f34bce7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0671c071919730219d1b9934f34bce7c">&#9670;&#160;</a></span>get_extra_specifications()</h2>
+<a id="a48b7a4b61104b315807e0dc63c07895f" name="a48b7a4b61104b315807e0dc63c07895f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b7a4b61104b315807e0dc63c07895f">&#9670;&#160;</a></span>get_extra_specifications()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,7 +254,12 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_attacking</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -269,16 +274,17 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
   <table class="params">
     <tr><td class="paramname">target</td><td>цель, на которую действует персонаж </td></tr>
     <tr><td class="paramname">move_number</td><td>номер хода, для передачи в функции-эффекты </td></tr>
+    <tr><td class="paramname">is_attacking</td><td>Прошла ли атака (от этого зависит будет ли выводится информация) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Характеристики персонажа, которые нужно добавить к текущим перед ударом</dd></dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<p>Используется только в функции <a class="el" href="class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1" title="Основная функция персонажа для проведения боя. Тут вычисляется шанс попадания удара (при помощи полей...">Pawn::attacked_by(Pawn&amp;, int)</a>, также есть усложнённый аналог для игрока <a class="el" href="class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Player::get_extra_specifications()</a> </p>
+<p>Используется только в функции <a class="el" href="class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1" title="Основная функция персонажа для проведения боя. Тут вычисляется шанс попадания удара (при помощи полей...">Pawn::attacked_by(Pawn&amp;, int)</a>, также есть усложнённый аналог для игрока <a class="el" href="class_player.html#a3fe07777f0428def508192e95a6a6fe3" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Player::get_extra_specifications()</a> </p>
 
-<p>Замещает <a class="el" href="class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e">Pawn</a>.</p>
+<p>Замещает <a class="el" href="class_pawn.html#a571b9b4ffbddb344413997d1bd84e0ff">Pawn</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00025">25</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00026">26</a></p>
 
 </div>
 </div>
@@ -330,7 +336,7 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
 <p>Получает видимое имя типа врага в виде строки </p>
 <dl class="section return"><dt>Возвращает</dt><dd>string Имя типа врага </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00096">96</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00097">97</a></p>
 
 </div>
 </div>
@@ -361,7 +367,7 @@ $(function(){initNavTree('class_enemy.html','','class_enemy-members'); });
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>Используется только в конструкторе по умолчанию <a class="el" href="#a94f30d348b6d2840fd71675472ba38dd" title="Создание нового экземпляра класса Enemy со случайным типом. Сразу устанавливаются параметры при помощ...">Enemy::Enemy()</a> </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00110">110</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a> строка <a class="el" href="_enemy_8cpp_source.html#l00111">111</a></p>
 
 </div>
 </div>

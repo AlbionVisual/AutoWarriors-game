@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warriors_20game_0',['Auto Warriors Game',['../index.html',1,'']]]
+  ['data_0',['Данные (папка data)',['../index.html#autotoc_md7',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['game_0',['Auto Warriors Game',['../index.html',1,'']]]
+  ['characters_0',['Персонажи (папка characters)',['../index.html#autotoc_md8',1,'']]]
 ];

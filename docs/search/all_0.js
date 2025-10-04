@@ -12,6 +12,6 @@ var searchData=
   ['ask_5ffor_5fclass_9',['ask_for_class',['../class_game.html#a8fd030f5a4a34e71ba407c323a197f77',1,'Game']]],
   ['attack_5fleft_10',['attack_left',['../class_game_drawer.html#aaabc04fddbbcd90f6fe76e21c8d964cd',1,'GameDrawer']]],
   ['attacked_5fby_11',['attacked_by',['../class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1',1,'Pawn']]],
-  ['auto_20warriors_20game_12',['Auto Warriors Game',['../index.html',1,'']]],
+  ['auto_20warriors_20game_12',['Auto Warriors Game',['../index.html',1,'Auto Warriors Game'],['../index.html#autotoc_md4',1,'Auto Warriors Game']]],
   ['axe_13',['AXE',['../_weapon_8h.html#ac8abd29b42fcca533b8442d4577c6221',1,'Weapon.h']]]
 ];

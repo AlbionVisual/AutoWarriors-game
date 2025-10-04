@@ -4,7 +4,7 @@ var class_player =
     [ "Player", "class_player.html#a518dca81f1273753eb646b120a874871", null ],
     [ "add_level", "class_player.html#aac337934864ef3fc6cfffcbb20eb28b8", null ],
     [ "apply_damage", "class_player.html#a2d837321112aff0d44481536acc8726d", null ],
-    [ "get_extra_specifications", "class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c", null ],
+    [ "get_extra_specifications", "class_player.html#a3fe07777f0428def508192e95a6a6fe3", null ],
     [ "get_level", "class_player.html#a3f7892b0a86001af3e40aef8b0bef2e3", null ],
     [ "get_visible_name", "class_player.html#ad18f3f066ccf58c330249c0a0cf19caf", null ],
     [ "reset_player", "class_player.html#a3ccc88c5bb0138e484e211329ef498a6", null ],

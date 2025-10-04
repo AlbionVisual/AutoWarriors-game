@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['game_0',['Game',['../index.html',1,'Auto Warriors Game'],['../class_game.html',1,'Game'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
+  ['game_0',['Game',['../index.html',1,'Auto Warriors Game'],['../index.html#autotoc_md4',1,'Auto Warriors Game'],['../class_game.html',1,'Game'],['../class_game.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
   ['game_1',['game',['../class_game.html#a45c4074372d18c72ba537576ea3bf61f',1,'Game']]],
   ['game_2ecpp_2',['Game.cpp',['../_game_8cpp.html',1,'']]],
   ['game_2eh_3',['Game.h',['../_game_8h.html',1,'']]],
@@ -10,7 +10,7 @@ var searchData=
   ['get_5fagility_7',['get_agility',['../class_pawn.html#ae097eb98a84393ef874cb4b2899a4960',1,'Pawn']]],
   ['get_5fclass_5ffrom_5fstring_8',['get_class_from_string',['../class_game.html#ab49017780331ae961159e387395587f8',1,'Game']]],
   ['get_5feffect_9',['get_effect',['../_effects_8cpp.html#a1acbf4d21b34011fb3c739a09ca1288d',1,'get_effect(Effects effect):&#160;Effects.cpp'],['../_effects_8h.html#a1acbf4d21b34011fb3c739a09ca1288d',1,'get_effect(Effects effect):&#160;Effects.cpp']]],
-  ['get_5fextra_5fspecifications_10',['get_extra_specifications',['../class_enemy.html#a0671c071919730219d1b9934f34bce7c',1,'Enemy::get_extra_specifications()'],['../class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e',1,'Pawn::get_extra_specifications()'],['../class_player.html#a0f413bbb707412ff9d16b4ce0a44ac8c',1,'Player::get_extra_specifications()']]],
+  ['get_5fextra_5fspecifications_10',['get_extra_specifications',['../class_enemy.html#a48b7a4b61104b315807e0dc63c07895f',1,'Enemy::get_extra_specifications()'],['../class_pawn.html#a571b9b4ffbddb344413997d1bd84e0ff',1,'Pawn::get_extra_specifications()'],['../class_player.html#a3fe07777f0428def508192e95a6a6fe3',1,'Player::get_extra_specifications()']]],
   ['get_5fhealth_11',['get_health',['../class_pawn.html#a43021c66565cefb012961cb83c65c251',1,'Pawn']]],
   ['get_5flevel_12',['get_level',['../class_player.html#a3f7892b0a86001af3e40aef8b0bef2e3',1,'Player']]],
   ['get_5fposteffect_13',['get_posteffect',['../_post_effects_8cpp.html#a4d732f4650baa0766358f8ee35ec74e2',1,'get_posteffect(PostEffects effect):&#160;PostEffects.cpp'],['../_post_effects_8h.html#a4d732f4650baa0766358f8ee35ec74e2',1,'get_posteffect(PostEffects effect):&#160;PostEffects.cpp']]],

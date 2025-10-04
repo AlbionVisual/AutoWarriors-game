@@ -25,6 +25,18 @@
 var NAVTREE =
 [
   [ "Auto Warriors Game", "index.html", [
+    [ "Структура проекта", "index.html#autotoc_md1", null ],
+    [ "Подготовка к работе над исходным кодом", "index.html#autotoc_md2", null ],
+    [ "Технологии", "index.html#autotoc_md3", null ],
+    [ "Auto Warriors Game", "index.html#autotoc_md4", [
+      [ "Правила", "index.html#autotoc_md5", null ],
+      [ "Как работает игра изнутри", "index.html#autotoc_md6", [
+        [ "Данные (папка data)", "index.html#autotoc_md7", null ],
+        [ "Персонажи (папка characters)", "index.html#autotoc_md8", null ],
+        [ "Утилиты (папка utils)", "index.html#autotoc_md9", null ],
+        [ "Визуализация (папка visualisaion)", "index.html#autotoc_md10", null ]
+      ] ]
+    ] ],
     [ "Пространства имен", "namespaces.html", [
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
       [ "Члены пространств имен", "namespacemembers.html", [
@@ -62,7 +74,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_console_utils_8cpp.html",
-"struct_weapon.html#a119a803c0b4a1b0b645c643216c52e6a"
+"namespacemembers_vars.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

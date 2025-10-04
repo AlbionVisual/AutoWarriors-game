@@ -115,8 +115,8 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <tr class="memdesc:a518dca81f1273753eb646b120a874871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт нового игрока с уже выбранным первым классом  <br /></td></tr>
 <tr class="memitem:ad18f3f066ccf58c330249c0a0cf19caf" id="r_ad18f3f066ccf58c330249c0a0cf19caf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad18f3f066ccf58c330249c0a0cf19caf">get_visible_name</a> ()</td></tr>
 <tr class="memdesc:ad18f3f066ccf58c330249c0a0cf19caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение видимого имени при помощи <a class="el" href="namespace_players.html#a22aa57b0263d3b277c53d6aa480fe492" title="Соотношение тегов игроков с их строковыми именами">Players::VISIBLE_NAMES</a>.  <br /></td></tr>
-<tr class="memitem:a0f413bbb707412ff9d16b4ce0a44ac8c" id="r_a0f413bbb707412ff9d16b4ce0a44ac8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f413bbb707412ff9d16b4ce0a44ac8c">get_extra_specifications</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number) override</td></tr>
-<tr class="memdesc:a0f413bbb707412ff9d16b4ce0a44ac8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам  <br /></td></tr>
+<tr class="memitem:a3fe07777f0428def508192e95a6a6fe3" id="r_a3fe07777f0428def508192e95a6a6fe3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpawn__specifications.html">pawn_specifications</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fe07777f0428def508192e95a6a6fe3">get_extra_specifications</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;target, int move_number, bool is_attacking) override</td></tr>
+<tr class="memdesc:a3fe07777f0428def508192e95a6a6fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам  <br /></td></tr>
 <tr class="memitem:a2d837321112aff0d44481536acc8726d" id="r_a2d837321112aff0d44481536acc8726d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d837321112aff0d44481536acc8726d">apply_damage</a> (const <a class="el" href="class_pawn.html">Pawn</a> &amp;damager, int extra_damage, int move_number) override</td></tr>
 <tr class="memdesc:a2d837321112aff0d44481536acc8726d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Применение урона с учётом постэффектов для данных персонажей определённых в <a class="el" href="namespace_players.html#aab18063bfeb869bbb171b72213a8bf3f" title="Соотношение тегов игроков с соответствующими бонусами (постэффектами) на каждом из трёх уровней">Players::POSTEFFECT_RELATION</a>.  <br /></td></tr>
 <tr class="memitem:a3ccc88c5bb0138e484e211329ef498a6" id="r_a3ccc88c5bb0138e484e211329ef498a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ccc88c5bb0138e484e211329ef498a6">reset_player</a> ()</td></tr>
@@ -188,9 +188,9 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <div class="fragment"><div class="line"><a class="code hl_function" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> pl = <a class="code hl_function" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a>();</div>
 <div class="line"><a class="code hl_class" href="class_game_drawer.html">GameDrawer</a> game = <a class="code hl_class" href="class_game_drawer.html">GameDrawer</a>(pl);</div>
 <div class="ttc" id="aclass_game_drawer_html"><div class="ttname"><a href="class_game_drawer.html">GameDrawer</a></div><div class="ttdoc">Класс-помощник в отображении информации о статусе игры. Использует Кэш для определения: какие значени...</div><div class="ttdef"><b>Определения</b> <a href="_game_drawer_8h_source.html#l00048">GameDrawer.h:48</a></div></div>
-<div class="ttc" id="aclass_player_html_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><div class="ttname"><a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player::Player</a></div><div class="ttdeci">Player()</div><div class="ttdoc">Создаёт игрока со случайным начальным классом</div><div class="ttdef"><b>Определения</b> <a href="_player_8cpp_source.html#l00147">Player.cpp:147</a></div></div>
+<div class="ttc" id="aclass_player_html_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><div class="ttname"><a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player::Player</a></div><div class="ttdeci">Player()</div><div class="ttdoc">Создаёт игрока со случайным начальным классом</div><div class="ttdef"><b>Определения</b> <a href="_player_8cpp_source.html#l00148">Player.cpp:148</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00147">147</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00148">148</a></p>
 
 </div>
 </div>
@@ -217,11 +217,11 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
   </dd>
 </dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
-<p>Единственный раз создаётся в <a class="el" href="main_8cpp.html">main.cpp</a></p>
+<p>Единственный раз создаётся в <a class="el" href="main_8cpp.html" title="Запуск игры Auto Warriors Game.">main.cpp</a></p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> pl = <a class="code hl_function" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a>(OUTLAW);</div>
 <div class="line"><a class="code hl_class" href="class_game_drawer.html">GameDrawer</a> game = <a class="code hl_class" href="class_game_drawer.html">GameDrawer</a>(pl);</div>
 </div><!-- fragment --> 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00128">128</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00129">129</a></p>
 
 </div>
 </div>
@@ -251,7 +251,7 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>Используется после победного боя, когда нужно поднять уровень игроку <a class="el" href="class_game.html#ae1b073b9b9930b4e2fda075065ebe3e7" title="Запускает бой со случайным врагом, а затем проводит диалог по улучшеиям">Game::play_round(bool)</a> </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00196">196</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00197">197</a></p>
 
 </div>
 </div>
@@ -301,12 +301,12 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 
 <p>Переопределяет метод предка <a class="el" href="class_pawn.html#a88f1b7c5c02ce8043279dd3d86b76987">Pawn</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00069">69</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00070">70</a></p>
 
 </div>
 </div>
-<a id="a0f413bbb707412ff9d16b4ce0a44ac8c" name="a0f413bbb707412ff9d16b4ce0a44ac8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f413bbb707412ff9d16b4ce0a44ac8c">&#9670;&#160;</a></span>get_extra_specifications()</h2>
+<a id="a3fe07777f0428def508192e95a6a6fe3" name="a3fe07777f0428def508192e95a6a6fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe07777f0428def508192e95a6a6fe3">&#9670;&#160;</a></span>get_extra_specifications()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +322,12 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move_number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_attacking</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -337,17 +342,18 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
   <table class="params">
     <tr><td class="paramname">target</td><td>На кого идёт удар этим персонажем </td></tr>
     <tr><td class="paramname">move_number</td><td>Номер хода </td></tr>
+    <tr><td class="paramname">is_attacking</td><td>Прошла ли атака (от этого зависит будет ли выводится информация) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="structpawn__specifications.html" title="Структура для хранения и передачи статичных значений характеристик персонажей">pawn_specifications</a> - Характеристики, которые нужно добавить перед ударом</dd></dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>Используется только в <a class="el" href="class_pawn.html#afc0fa27e59d8c6bee2b562861eb001f1" title="Основная функция персонажа для проведения боя. Тут вычисляется шанс попадания удара (при помощи полей...">Pawn::attacked_by(Pawn&amp;, int)</a></p>
-<p>Базовая функция в <a class="el" href="class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e" title="Получает дополнительные данные, которые нужно именно добавить при атаке к характеристикам">Pawn::get_extra_specifications(const Pawn&amp;, int)</a>, а также есть упрощённый аналог в <a class="el" href="class_enemy.html#a0671c071919730219d1b9934f34bce7c" title="Позволяет получить дополнительные характеристики, которые должны добавиться к текущим перед ударом....">Enemy::get_extra_specifications(const Pawn&amp;, int)</a> </p>
+<p>Базовая функция в Pawn::get_extra_specifications(const Pawn&amp;, int), а также есть упрощённый аналог в Enemy::get_extra_specifications(const Pawn&amp;, int) </p>
 
-<p>Замещает <a class="el" href="class_pawn.html#a4f4b6afe47057f76a302ac25b3f25d3e">Pawn</a>.</p>
+<p>Замещает <a class="el" href="class_pawn.html#a571b9b4ffbddb344413997d1bd84e0ff">Pawn</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00029">29</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00030">30</a></p>
 
 </div>
 </div>
@@ -371,7 +377,7 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>Используется, когда нужно определить можно ли повышать ещё уровень <a class="el" href="class_game.html#ae1b073b9b9930b4e2fda075065ebe3e7" title="Запускает бой со случайным врагом, а затем проводит диалог по улучшеиям">Game::play_round(bool)</a> </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00210">210</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00211">211</a></p>
 
 </div>
 </div>
@@ -393,7 +399,7 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <p>Получение видимого имени при помощи <a class="el" href="namespace_players.html#a22aa57b0263d3b277c53d6aa480fe492" title="Соотношение тегов игроков с их строковыми именами">Players::VISIBLE_NAMES</a>. </p>
 <dl class="section return"><dt>Возвращает</dt><dd>string - Имя игрока, соответствующее сохранённой выборке мультикласса </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00105">105</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00106">106</a></p>
 
 </div>
 </div>
@@ -416,7 +422,7 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>Вызывается каждый раз после победы игрока <a class="el" href="class_game.html#ae1b073b9b9930b4e2fda075065ebe3e7" title="Запускает бой со случайным врагом, а затем проводит диалог по улучшеиям">Game::play_round(bool)</a> </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00184">184</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00185">185</a></p>
 
 </div>
 </div>
@@ -447,7 +453,7 @@ $(function(){initNavTree('class_player.html','','class_player-members'); });
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>Используется только в конструкторах <a class="el" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8" title="Создаёт игрока со случайным начальным классом">Player::Player()</a> и <a class="el" href="#a518dca81f1273753eb646b120a874871" title="Создаёт нового игрока с уже выбранным первым классом">Player::Player(Players::PlayerTypes)</a> </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00162">162</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_player_8cpp_source.html">Player.cpp</a> строка <a class="el" href="_player_8cpp_source.html#l00163">163</a></p>
 
 </div>
 </div>
