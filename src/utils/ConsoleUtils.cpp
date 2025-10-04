@@ -84,7 +84,7 @@ void colorize_text(ConsoleColor color) {
 #else
 // Linux/macOS
 #include <iostream>
-void colorize_text(ConsoleColor color = BLACK_WHITE);
+void colorize_text(ConsoleColor color);
 void clear_console() {
     colorize_text();
     std::cout << "\033[2J\033[H";
